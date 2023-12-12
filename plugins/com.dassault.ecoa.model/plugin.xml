@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ECOADT -->
+      <package
+            uri="http://www.w3.org/2001/XMLSchema"
+            class="org.w3._2001.xml.xsd.SchemaPackage"
+            genModel="model/ECOADT.genmodel"/>
+   </extension>
+
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated ECOADT -->
+      <parser
+            type="schema"
+            class="org.w3._2001.xml.xsd.util.SchemaResourceFactoryImpl"/>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ECOADT -->
+      <package
+            uri="http://www.ecoa.technology/insertion-policy-2.0"
+            class="technology.ecoa.insertion.policy._2.polPackage"
+            genModel="model/ECOADT.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated ECOADT -->
+      <parser
+            type="pol"
+            class="technology.ecoa.insertion.policy._2.util.polResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ECOADT -->
+      <package
+            uri="http://www.ecoa.technology/module-behaviour-2.0"
+            class="technology.ecoa.module.behaviour._2.modPackage"
+            genModel="model/ECOADT.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated ECOADT -->
+      <parser
+            type="mod"
+            class="technology.ecoa.module.behaviour._2.util.modResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ECOADT -->
+      <package
+            uri="http://www.ecoa.technology/udpbinding-2.0"
+            class="technology.ecoa.udpbinding._2.udpPackage"
+            genModel="model/ECOADT.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated ECOADT -->
+      <parser
+            type="udp"
+            class="technology.ecoa.udpbinding._2.util.udpResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ECOADT -->
+      <package
+            uri="http://www.ecoa.technology/bin-desc-2.0"
+            class="technology.ecoa.bin.desc._2.binPackage"
+            genModel="model/ECOADT.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated ECOADT -->
+      <parser
+            type="bin"
+            class="technology.ecoa.bin.desc._2.util.binResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ECOADT -->
+      <package
+            uri="EcoaCommon20"
+            class="EcoaCommon20.EcoaCommon20Package"
+            genModel="model/ECOADT.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated ECOADT -->
+      <parser
+            type="ecoacommon20"
+            class="EcoaCommon20.util.EcoaCommon20ResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ECOADT -->
+      <package
+            uri="http://www.ecoa.technology/cross-platforms-view-2.0"
+            class="technology.ecoa.cross.platforms.view._2.viewPackage"
+            genModel="model/ECOADT.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated ECOADT -->
+      <parser
+            type="view"
+            class="technology.ecoa.cross.platforms.view._2.util.viewResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ECOADT -->
+      <package
+            uri="http://www.ecoa.technology/deployment-2.0"
+            class="technology.ecoa.deployment._2.depPackage"
+            genModel="model/ECOADT.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated ECOADT -->
+      <parser
+            type="dep"
+            class="technology.ecoa.deployment._2.util.depResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ECOADT -->
+      <package
+            uri="http://www.ecoa.technology/implementation-2.0"
+            class="technology.ecoa.implementation._2.impPackage"
+            genModel="model/ECOADT.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated ECOADT -->
+      <parser
+            type="imp"
+            class="technology.ecoa.implementation._2.util.impResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ECOADT -->
+      <package
+            uri="http://www.ecoa.technology/interface-2.0"
+            class="technology.ecoa.interface_._2.interPackage"
+            genModel="model/ECOADT.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated ECOADT -->
+      <parser
+            type="inter"
+            class="technology.ecoa.interface_._2.util.interResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ECOADT -->
+      <package
+            uri="http://www.ecoa.technology/interface-qos-2.0"
+            class="technology.ecoa.interface_.qos._2.qosPackage"
+            genModel="model/ECOADT.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated ECOADT -->
+      <parser
+            type="qos"
+            class="technology.ecoa.interface_.qos._2.util.qosResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ECOADT -->
+      <package
+            uri="http://www.ecoa.technology/logicalsystem-2.0"
+            class="technology.ecoa.logicalsystem._2.logPackage"
+            genModel="model/ECOADT.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated ECOADT -->
+      <parser
+            type="log"
+            class="technology.ecoa.logicalsystem._2.util.logResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ECOADT -->
+      <package
+            uri="http://www.ecoa.technology/project-2.0"
+            class="technology.ecoa.project._2.projPackage"
+            genModel="model/ECOADT.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated ECOADT -->
+      <parser
+            type="proj"
+            class="technology.ecoa.project._2.util.projResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ECOADT -->
+      <package
+            uri="http://www.ecoa.technology/types-2.0"
+            class="technology.ecoa.types._2.typPackage"
+            genModel="model/ECOADT.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated ECOADT -->
+      <parser
+            type="typ"
+            class="technology.ecoa.types._2.util.typResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ECOADT -->
+      <package
+            uri="http://www.ecoa.technology/uid-2.0"
+            class="technology.ecoa.uid._2.uidPackage"
+            genModel="model/ECOADT.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated ECOADT -->
+      <parser
+            type="uid"
+            class="technology.ecoa.uid._2.util.uidResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ECOADT -->
+      <package
+            uri="http://docs.oasis-open.org/ns/opencsa/sca/200912"
+            class="org.open.oasis.docs.ns.opencsa.sca.sca.scaPackage"
+            genModel="model/ECOADT.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated ECOADT -->
+      <parser
+            type="sca"
+            class="org.open.oasis.docs.ns.opencsa.sca.sca.util.scaResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ECOADT -->
+      <package
+            uri="http://www.ecoa.technology/sca-extension-2.0"
+            class="technology.ecoa.sca.extension.scaExt.scaExtPackage"
+            genModel="model/ECOADT.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated ECOADT -->
+      <parser
+            type="scaext"
+            class="technology.ecoa.sca.extension.scaExt.util.scaExtResourceFactoryImpl"/>
+   </extension>
+
+</plugin>

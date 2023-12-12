@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated ECOADT -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.w3._2001.xml.xsd.presentation.SchemaModelWizardID"
+            name="%_UI_SchemaModelWizard_label"
+            class="org.w3._2001.xml.xsd.presentation.SchemaModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/SchemaModelFile.gif">
+         <description>%_UI_SchemaModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated ECOADT -->
+      <editor
+            id="org.w3._2001.xml.xsd.presentation.SchemaEditorID"
+            name="%_UI_SchemaEditor_label"
+            icon="icons/full/obj16/SchemaModelFile.gif"
+            extensions="schema"
+            class="org.w3._2001.xml.xsd.presentation.SchemaEditor"
+            contributorClass="org.w3._2001.xml.xsd.presentation.SchemaActionBarContributor">
+      </editor>
+   </extension>
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated ECOADT -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="technology.ecoa.insertion.policy._2.presentation.polModelWizardID"
+            name="%_UI_polModelWizard_label"
+            class="technology.ecoa.insertion.policy._2.presentation.polModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/polModelFile.gif">
+         <description>%_UI_polModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated ECOADT -->
+      <editor
+            id="technology.ecoa.insertion.policy._2.presentation.polEditorID"
+            name="%_UI_polEditor_label"
+            icon="icons/full/obj16/polModelFile.gif"
+            extensions="pol"
+            class="technology.ecoa.insertion.policy._2.presentation.polEditor"
+            contributorClass="technology.ecoa.insertion.policy._2.presentation.polActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated ECOADT -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="technology.ecoa.module.behaviour._2.presentation.modModelWizardID"
+            name="%_UI_modModelWizard_label"
+            class="technology.ecoa.module.behaviour._2.presentation.modModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/modModelFile.gif">
+         <description>%_UI_modModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated ECOADT -->
+      <editor
+            id="technology.ecoa.module.behaviour._2.presentation.modEditorID"
+            name="%_UI_modEditor_label"
+            icon="icons/full/obj16/modModelFile.gif"
+            extensions="mod"
+            class="technology.ecoa.module.behaviour._2.presentation.modEditor"
+            contributorClass="technology.ecoa.module.behaviour._2.presentation.modActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated ECOADT -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="technology.ecoa.udpbinding._2.presentation.udpModelWizardID"
+            name="%_UI_udpModelWizard_label"
+            class="technology.ecoa.udpbinding._2.presentation.udpModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/udpModelFile.gif">
+         <description>%_UI_udpModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated ECOADT -->
+      <editor
+            id="technology.ecoa.udpbinding._2.presentation.udpEditorID"
+            name="%_UI_udpEditor_label"
+            icon="icons/full/obj16/udpModelFile.gif"
+            extensions="udp"
+            class="technology.ecoa.udpbinding._2.presentation.udpEditor"
+            contributorClass="technology.ecoa.udpbinding._2.presentation.udpActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated ECOADT -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="technology.ecoa.bin.desc._2.presentation.binModelWizardID"
+            name="%_UI_binModelWizard_label"
+            class="technology.ecoa.bin.desc._2.presentation.binModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/binModelFile.gif">
+         <description>%_UI_binModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated ECOADT -->
+      <editor
+            id="technology.ecoa.bin.desc._2.presentation.binEditorID"
+            name="%_UI_binEditor_label"
+            icon="icons/full/obj16/binModelFile.gif"
+            extensions="bin"
+            class="technology.ecoa.bin.desc._2.presentation.binEditor"
+            contributorClass="technology.ecoa.bin.desc._2.presentation.binActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated ECOADT -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="EcoaCommon20.presentation.EcoaCommon20ModelWizardID"
+            name="%_UI_EcoaCommon20ModelWizard_label"
+            class="EcoaCommon20.presentation.EcoaCommon20ModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/EcoaCommon20ModelFile.gif">
+         <description>%_UI_EcoaCommon20ModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated ECOADT -->
+      <editor
+            id="EcoaCommon20.presentation.EcoaCommon20EditorID"
+            name="%_UI_EcoaCommon20Editor_label"
+            icon="icons/full/obj16/EcoaCommon20ModelFile.gif"
+            extensions="ecoacommon20"
+            class="EcoaCommon20.presentation.EcoaCommon20Editor"
+            contributorClass="EcoaCommon20.presentation.EcoaCommon20ActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated ECOADT -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="technology.ecoa.cross.platforms.view._2.presentation.viewModelWizardID"
+            name="%_UI_viewModelWizard_label"
+            class="technology.ecoa.cross.platforms.view._2.presentation.viewModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/viewModelFile.gif">
+         <description>%_UI_viewModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated ECOADT -->
+      <editor
+            id="technology.ecoa.cross.platforms.view._2.presentation.viewEditorID"
+            name="%_UI_viewEditor_label"
+            icon="icons/full/obj16/viewModelFile.gif"
+            extensions="view"
+            class="technology.ecoa.cross.platforms.view._2.presentation.viewEditor"
+            contributorClass="technology.ecoa.cross.platforms.view._2.presentation.viewActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated ECOADT -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="technology.ecoa.deployment._2.presentation.depModelWizardID"
+            name="%_UI_depModelWizard_label"
+            class="technology.ecoa.deployment._2.presentation.depModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/depModelFile.gif">
+         <description>%_UI_depModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated ECOADT -->
+      <editor
+            id="technology.ecoa.deployment._2.presentation.depEditorID"
+            name="%_UI_depEditor_label"
+            icon="icons/full/obj16/depModelFile.gif"
+            extensions="dep"
+            class="technology.ecoa.deployment._2.presentation.depEditor"
+            contributorClass="technology.ecoa.deployment._2.presentation.depActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated ECOADT -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="technology.ecoa.implementation._2.presentation.impModelWizardID"
+            name="%_UI_impModelWizard_label"
+            class="technology.ecoa.implementation._2.presentation.impModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/impModelFile.gif">
+         <description>%_UI_impModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated ECOADT -->
+      <editor
+            id="technology.ecoa.implementation._2.presentation.impEditorID"
+            name="%_UI_impEditor_label"
+            icon="icons/full/obj16/impModelFile.gif"
+            extensions="imp"
+            class="technology.ecoa.implementation._2.presentation.impEditor"
+            contributorClass="technology.ecoa.implementation._2.presentation.impActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated ECOADT -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="technology.ecoa.interface_._2.presentation.interModelWizardID"
+            name="%_UI_interModelWizard_label"
+            class="technology.ecoa.interface_._2.presentation.interModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/interModelFile.gif">
+         <description>%_UI_interModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated ECOADT -->
+      <editor
+            id="technology.ecoa.interface_._2.presentation.interEditorID"
+            name="%_UI_interEditor_label"
+            icon="icons/full/obj16/interModelFile.gif"
+            extensions="inter"
+            class="technology.ecoa.interface_._2.presentation.interEditor"
+            contributorClass="technology.ecoa.interface_._2.presentation.interActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated ECOADT -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="technology.ecoa.interface_.qos._2.presentation.qosModelWizardID"
+            name="%_UI_qosModelWizard_label"
+            class="technology.ecoa.interface_.qos._2.presentation.qosModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/qosModelFile.gif">
+         <description>%_UI_qosModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated ECOADT -->
+      <editor
+            id="technology.ecoa.interface_.qos._2.presentation.qosEditorID"
+            name="%_UI_qosEditor_label"
+            icon="icons/full/obj16/qosModelFile.gif"
+            extensions="qos"
+            class="technology.ecoa.interface_.qos._2.presentation.qosEditor"
+            contributorClass="technology.ecoa.interface_.qos._2.presentation.qosActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated ECOADT -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="technology.ecoa.logicalsystem._2.presentation.logModelWizardID"
+            name="%_UI_logModelWizard_label"
+            class="technology.ecoa.logicalsystem._2.presentation.logModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/logModelFile.gif">
+         <description>%_UI_logModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated ECOADT -->
+      <editor
+            id="technology.ecoa.logicalsystem._2.presentation.logEditorID"
+            name="%_UI_logEditor_label"
+            icon="icons/full/obj16/logModelFile.gif"
+            extensions="log"
+            class="technology.ecoa.logicalsystem._2.presentation.logEditor"
+            contributorClass="technology.ecoa.logicalsystem._2.presentation.logActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated ECOADT -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="technology.ecoa.project._2.presentation.projModelWizardID"
+            name="%_UI_projModelWizard_label"
+            class="technology.ecoa.project._2.presentation.projModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/projModelFile.gif">
+         <description>%_UI_projModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated ECOADT -->
+      <editor
+            id="technology.ecoa.project._2.presentation.projEditorID"
+            name="%_UI_projEditor_label"
+            icon="icons/full/obj16/projModelFile.gif"
+            extensions="proj"
+            class="technology.ecoa.project._2.presentation.projEditor"
+            contributorClass="technology.ecoa.project._2.presentation.projActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated ECOADT -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="technology.ecoa.types._2.presentation.typModelWizardID"
+            name="%_UI_typModelWizard_label"
+            class="technology.ecoa.types._2.presentation.typModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/typModelFile.gif">
+         <description>%_UI_typModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated ECOADT -->
+      <editor
+            id="technology.ecoa.types._2.presentation.typEditorID"
+            name="%_UI_typEditor_label"
+            icon="icons/full/obj16/typModelFile.gif"
+            extensions="typ"
+            class="technology.ecoa.types._2.presentation.typEditor"
+            contributorClass="technology.ecoa.types._2.presentation.typActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated ECOADT -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="technology.ecoa.uid._2.presentation.uidModelWizardID"
+            name="%_UI_uidModelWizard_label"
+            class="technology.ecoa.uid._2.presentation.uidModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/uidModelFile.gif">
+         <description>%_UI_uidModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated ECOADT -->
+      <editor
+            id="technology.ecoa.uid._2.presentation.uidEditorID"
+            name="%_UI_uidEditor_label"
+            icon="icons/full/obj16/uidModelFile.gif"
+            extensions="uid"
+            class="technology.ecoa.uid._2.presentation.uidEditor"
+            contributorClass="technology.ecoa.uid._2.presentation.uidActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated ECOADT -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.open.oasis.docs.ns.opencsa.sca.sca.presentation.scaModelWizardID"
+            name="%_UI_scaModelWizard_label"
+            class="org.open.oasis.docs.ns.opencsa.sca.sca.presentation.scaModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/scaModelFile.gif">
+         <description>%_UI_scaModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated ECOADT -->
+      <editor
+            id="org.open.oasis.docs.ns.opencsa.sca.sca.presentation.scaEditorID"
+            name="%_UI_scaEditor_label"
+            icon="icons/full/obj16/scaModelFile.gif"
+            extensions="sca"
+            class="org.open.oasis.docs.ns.opencsa.sca.sca.presentation.scaEditor"
+            contributorClass="org.open.oasis.docs.ns.opencsa.sca.sca.presentation.scaActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated ECOADT -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="technology.ecoa.sca.extension.scaExt.presentation.scaExtModelWizardID"
+            name="%_UI_scaExtModelWizard_label"
+            class="technology.ecoa.sca.extension.scaExt.presentation.scaExtModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/scaExtModelFile.gif">
+         <description>%_UI_scaExtModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated ECOADT -->
+      <editor
+            id="technology.ecoa.sca.extension.scaExt.presentation.scaExtEditorID"
+            name="%_UI_scaExtEditor_label"
+            icon="icons/full/obj16/scaExtModelFile.gif"
+            extensions="scaext"
+            class="technology.ecoa.sca.extension.scaExt.presentation.scaExtEditor"
+            contributorClass="technology.ecoa.sca.extension.scaExt.presentation.scaExtActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

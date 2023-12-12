@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated EDT -->
+      <package
+            uri="edtimplementation"
+            class="edtimplementation.EdtimplementationPackage"
+            genModel="model/EDT.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated EDT -->
+      <package
+            uri="edtlogical"
+            class="edtlogical.EdtlogicalPackage"
+            genModel="model/EDT.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated EDT -->
+      <package
+            uri="EDTProject2"
+            class="edtproject.EDTProjectPackage"
+            genModel="model/EDT.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated EDT -->
+      <package
+            uri="EDTService"
+            class="edtinterface.EDTInterfacePackage"
+            genModel="model/EDT.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated EDT -->
+      <parser
+            type="edtinterface"
+            class="edtinterface.util.EDTInterfaceResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated EDT -->
+      <package
+            uri="EDTTypes"
+            class="edttype.EDTTypePackage"
+            genModel="model/EDT.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated EDT -->
+      <package
+            uri="temp"
+            class="temp.TempPackage"
+            genModel="model/EDT.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated EDT -->
+      <package
+            uri="edtudp"
+            class="edtudp.EdtudpPackage"
+            genModel="model/EDT.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated EDT -->
+      <package
+            uri="edtuid"
+            class="edtuid.EdtuidPackage"
+            genModel="model/EDT.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated EDT -->
+      <package
+            uri="edtbin"
+            class="edtbin.EdtbinPackage"
+            genModel="model/EDT.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated EDT -->
+      <package
+            uri="edtdeployment"
+            class="edtdeployment.EdtdeploymentPackage"
+            genModel="model/EDT.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated EDT -->
+      <package
+            uri="edtqos"
+            class="edtqos.EdtqosPackage"
+            genModel="model/EDT.genmodel"/>
+   </extension>
+</plugin>

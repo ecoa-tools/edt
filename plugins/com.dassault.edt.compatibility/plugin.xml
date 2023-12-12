@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application
+            cardinality="singleton-scoped">
+         <run
+               class="com.dassault.edt.compatibility.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="com.dassault.edt.compatibility.Perspective"
+            name="ECOADT Application"
+            id="com.dassault.edt.compatibility.perspective">
+      </perspective>
+   </extension>
+	<extension id="product" point="org.eclipse.core.runtime.products">
+	  <product application="com.dassault.edt.compatibility.application" name="ECOA Design Tool">
+	    <property name="appName" value="ECOA Design Tool"> </property>
+	    <property name="applicationXMI" value="com.dassault.edt.compatibility/Application.e4xmi"> </property>
+     <property
+           name="lifeCycleURI"
+           value="bundleclass://com.dassault.edt.compatibility/com.dassault.edt.compatibility.E4LifeCycle">
+     </property>
+     <property
+           name="windowImages"
+           value="icons/32x32/edt 32.png">
+     </property>
+	  </product>
+	</extension>
+ <extension
+       point="org.eclipse.ui.startup">
+    <startup
+          class="com.dassault.edt.compatibility.Startup">
+    </startup>
+ </extension>
+
+</plugin>

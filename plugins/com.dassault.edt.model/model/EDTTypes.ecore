@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="edttype" nsURI="EDTTypes" nsPrefix="EDTTypes">
+  <eClassifiers xsi:type="ecore:EClass" name="EDTDataType" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType ../../com.dassault.ecoa.model/model/types.ecore#//TypeName"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Comment" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Simple" eSuperTypes="#//EDTDataType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxRange" eType="ecore:EDataType ../../com.dassault.ecoa.model/model/types.ecore#//ConstantReferenceOrValue"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minRange" eType="ecore:EDataType ../../com.dassault.ecoa.model/model/types.ecore#//ConstantReferenceOrValue"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="precision" eType="ecore:EDataType ../../com.dassault.ecoa.model/model/types.ecore#//ConstantReferenceOrValue"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Type" lowerBound="1" eType="#//EDTDataType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="maxRangeType" eType="#//Constant"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="minRangeType" eType="#//Constant"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="precisionType" eType="#//Constant"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Record" eSuperTypes="#//EDTDataType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="field" lowerBound="1" upperBound="-1"
+        eType="#//Field" containment="true" resolveProxies="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Constant" eSuperTypes="#//EDTDataType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType ../../com.dassault.ecoa.model/model/types.ecore#//ConstantReferenceOrValue"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Type" lowerBound="1" eType="#//EDTDataType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="valueType" eType="#//Constant"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VariantRecord" eSuperTypes="#//EDTDataType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="field" upperBound="-1"
+        eType="#//Field" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="union" lowerBound="1" upperBound="-1"
+        eType="#//Union" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="selectName" lowerBound="1"
+        eType="ecore:EDataType ../../com.dassault.ecoa.model/model/types.ecore#//NameId"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SelectType" lowerBound="1"
+        eType="#//EDTDataType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Array" eSuperTypes="#//EDTDataType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxNumber" lowerBound="1"
+        eType="ecore:EDataType ../../com.dassault.ecoa.model/model/types.ecore#//ConstantReferenceOrPositiveIntegerValue"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ItemType" lowerBound="1"
+        eType="#//EDTDataType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="maxNumberType" eType="#//Constant"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FixedArray" eSuperTypes="#//EDTDataType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxNumber" lowerBound="1"
+        eType="ecore:EDataType ../../com.dassault.ecoa.model/model/types.ecore#//ConstantReferenceOrPositiveIntegerValue"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ItemType" lowerBound="1"
+        eType="#//EDTDataType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="maxNumberType" eType="#//Constant"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Enum" eSuperTypes="#//EDTDataType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" upperBound="-1"
+        eType="#//EnumValue" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Type" lowerBound="1" eType="#//EDTDataType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BasicType" eSuperTypes="#//EDTDataType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Library">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="DataTypes" upperBound="-1"
+        eType="#//EDTDataType" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="usedLibraries" upperBound="-1"
+        eType="#//Library"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType ../../com.dassault.ecoa.model/model/types.ecore#//LibraryName"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Union">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="comment" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType ../../com.dassault.ecoa.model/model/types.ecore#//NameId"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="when" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//EDTDataType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Field">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="comment" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType ../../com.dassault.ecoa.model/model/types.ecore#//NameId"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Type" lowerBound="1" eType="#//EDTDataType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EnumValue">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="comment" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType ../../com.dassault.ecoa.model/model/types.ecore#//TypeName"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valnum" eType="ecore:EDataType ../../com.dassault.ecoa.model/model/types.ecore#//ConstantReferenceOrIntegerValue"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="valnumType" eType="#//Constant"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PredefinedType" abstract="true" interface="true"
+      eSuperTypes="#//EDTDataType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EnumPredefined" eSuperTypes="#//PredefinedType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" upperBound="-1"
+        eType="#//EnumValuePredefined" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Type" lowerBound="1" eType="#//EDTDataType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EnumValuePredefined">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType ../../com.dassault.ecoa.model/model/types.ecore#//TypeName"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valnum" eType="ecore:EDataType ../../com.dassault.ecoa.model/model/types.ecore#//ConstantReferenceOrIntegerValue"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RecordPredefined" eSuperTypes="#//PredefinedType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="field" lowerBound="1" upperBound="-1"
+        eType="#//FieldPredefined" containment="true" resolveProxies="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FieldPredefined">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType ../../com.dassault.ecoa.model/model/types.ecore#//NameId"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Type" lowerBound="1" eType="#//EDTDataType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SimplePredefined" eSuperTypes="#//PredefinedType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Type" lowerBound="1" eType="#//EDTDataType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ArrayPredefined" eSuperTypes="#//PredefinedType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxNumber" lowerBound="1"
+        eType="ecore:EDataType ../../com.dassault.ecoa.model/model/types.ecore#//ConstantReferenceOrPositiveIntegerValue"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ItemType" lowerBound="1"
+        eType="#//EDTDataType"/>
+  </eClassifiers>
+</ecore:EPackage>

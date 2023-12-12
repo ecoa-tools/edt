@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/com.dassault.edt.model/src" editDirectory="/com.dassault.edt.model.edit/src"
+    modelPluginID="com.dassault.edt.model" modelName="EDT" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="17.0" copyrightFields="false"
+    usedGenPackages="../../com.dassault.ecoa.model/model/ECOADT.genmodel#//_2.1 ../../com.dassault.ecoa.model/model/ECOADT.genmodel#//_2.2 ../../com.dassault.ecoa.model/model/ECOADT.genmodel#//_2.5 ../../com.dassault.ecoa.model/model/ECOADT.genmodel#//_2.6 ../../com.dassault.ecoa.model/model/ECOADT.genmodel#//_2.7 ../../com.dassault.ecoa.model/model/ECOADT.genmodel#//_2.8 ../../com.dassault.ecoa.model/model/ECOADT.genmodel#//_2.9 ../../com.dassault.ecoa.model/model/ECOADT.genmodel#//_2.11 ../../com.dassault.ecoa.model/model/ECOADT.genmodel#//sca ../../com.dassault.ecoa.model/model/ECOADT.genmodel#//scaExt ../../com.dassault.ecoa.model/model/ECOADT.genmodel#//_2.3 ../../com.dassault.ecoa.model/model/ECOADT.genmodel#//_2 ../../com.dassault.ecoa.model/model/ECOADT.genmodel#//_2.4 ../../com.dassault.ecoa.model/model/ECOADT.genmodel#//_2.12"
+    operationReflection="true" importOrganizing="true" decoration="Live" modelDocumentation="">
+  <foreignModel>EDTBinDesc.ecore</foreignModel>
+  <foreignModel>EDTDeployment.ecore</foreignModel>
+  <foreignModel>EDTImplementation.ecore</foreignModel>
+  <foreignModel>EDTLogicalSystem.ecore</foreignModel>
+  <foreignModel>EDTProject2.ecore</foreignModel>
+  <foreignModel>EDTQos.ecore</foreignModel>
+  <foreignModel>EDTServices.ecore</foreignModel>
+  <foreignModel>EDTTypes.ecore</foreignModel>
+  <foreignModel>toConvert.ecore</foreignModel>
+  <foreignModel>UDPBinding.ecore</foreignModel>
+  <genPackages prefix="Edtbin" disposableProviderFactory="true" ecorePackage="EDTBinDesc.ecore#/">
+    <genClasses ecoreClass="EDTBinDesc.ecore#//BinaryModule">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTBinDesc.ecore#//BinaryModule/binaryDependencies"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTBinDesc.ecore#//BinaryModule/checksum"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTBinDesc.ecore#//BinaryModule/heapSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTBinDesc.ecore#//BinaryModule/object"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTBinDesc.ecore#//BinaryModule/stackSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTBinDesc.ecore#//BinaryModule/userContextSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTBinDesc.ecore#//BinaryModule/warmStartContextSize"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTBinDesc.ecore#//BinaryModule/reference"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTBinDesc.ecore#//BinDesc">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTBinDesc.ecore#//BinDesc/binaryModules"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTBinDesc.ecore#//BinDesc/insertionPolicy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTBinDesc.ecore#//BinDesc/processorTargetType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTBinDesc.ecore#//BinDesc/fileName"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Edtdeployment" ecorePackage="EDTDeployment.ecore#/">
+    <genClasses ecoreClass="EDTDeployment.ecore#//Deployment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTDeployment.ecore#//Deployment/Name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTDeployment.ecore#//Deployment/logicalSystem"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTDeployment.ecore#//Deployment/finalAssembly"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTDeployment.ecore#//Deployment/protectionDomains"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTDeployment.ecore#//Deployment/logPolicies"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTDeployment.ecore#//Deployment/platformConfigurations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTDeployment.ecore#//Deployment/wireMappings"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTDeployment.ecore#//ProtectionDomain">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTDeployment.ecore#//ProtectionDomain/deployedModuleInstances"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTDeployment.ecore#//ProtectionDomain/deployedTriggerInstances"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTDeployment.ecore#//ProtectionDomain/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTDeployment.ecore#//ProtectionDomain/executeOnComputingNode"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTDeployment.ecore#//ProtectionDomain/executeOnComputingPlatform"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTDeployment.ecore#//DeployedModuleInstance">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTDeployment.ecore#//DeployedModuleInstance/modulePriority"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTDeployment.ecore#//DeployedModuleInstance/ModuleInstance"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference EDTDeployment.ecore#//DeployedModuleInstance/ComponentImplementation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTDeployment.ecore#//DeployedModuleInstance/Component"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTDeployment.ecore#//DeployedTriggerInstance">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTDeployment.ecore#//DeployedTriggerInstance/triggerPriority"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTDeployment.ecore#//DeployedTriggerInstance/TriggerInstance"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference EDTDeployment.ecore#//DeployedTriggerInstance/ComponentImplementation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTDeployment.ecore#//DeployedTriggerInstance/Component"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTDeployment.ecore#//LogPolicy">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTDeployment.ecore#//LogPolicy/componentLogs"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTDeployment.ecore#//ComponentLog">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTDeployment.ecore#//ComponentLog/moduleLogs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTDeployment.ecore#//ComponentLog/enabledLevels"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTDeployment.ecore#//ComponentLog/ComponentInstance"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference EDTDeployment.ecore#//ComponentLog/ComponentImplementation"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTDeployment.ecore#//ModuleLog">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTDeployment.ecore#//ModuleLog/enabledLevels"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTDeployment.ecore#//ModuleLog/ModuleInstance"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTDeployment.ecore#//PlatformConfiguration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTDeployment.ecore#//PlatformConfiguration/computingNodeConfigurations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTDeployment.ecore#//PlatformConfiguration/platformMessages"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTDeployment.ecore#//PlatformConfiguration/eUIDs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTDeployment.ecore#//PlatformConfiguration/faultHandlerNotificationMaxNumber"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTDeployment.ecore#//PlatformConfiguration/computingPlatform"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTDeployment.ecore#//PlatformMessage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference EDTDeployment.ecore#//PlatformMessage/mappedOnLinkId"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTDeployment.ecore#//ComputingNodeConfiguration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTDeployment.ecore#//ComputingNodeConfiguration/schedulingInformation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTDeployment.ecore#//ComputingNodeConfiguration/computingNode"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTDeployment.ecore#//WireMapping">
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference EDTDeployment.ecore#//WireMapping/mappedOnLinkId"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTDeployment.ecore#//WireMapping/Wire"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Edtimplementation" disposableProviderFactory="true" ecorePackage="EDTImplementation.ecore#/">
+    <genClasses ecoreClass="EDTImplementation.ecore#//ComponentImplementation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//ComponentImplementation/usedLibraries"/>
+      <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference EDTImplementation.ecore#//ComponentImplementation/AssociatedServiceQos"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//ComponentImplementation/services"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//ComponentImplementation/references"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//ComponentImplementation/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference EDTImplementation.ecore#//ComponentImplementation/componentDefinition"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference EDTImplementation.ecore#//ComponentImplementation/ModuleTypes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//ComponentImplementation/moduleImplementations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//ComponentImplementation/instances"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//ComponentImplementation/ComponentDefinitionReferences"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//ComponentImplementation/ComponentDefinitionServices"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//ComponentImplementation/OperationLinks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//ComponentImplementation/ExternalSenders"/>
+      <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference EDTImplementation.ecore#//ComponentImplementation/ModuleBehaviours"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//ComponentImplementation/binDesc"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//ComponentImplementation/insertionPolicyList"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//ComponentImplementationReference">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//ComponentImplementationReference/newQos"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//ComponentImplementationReference/ComponentDefinitionReference"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//ComponentImplementationService">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//ComponentImplementationService/newQos"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//ComponentImplementationService/ComponentDefinitionService"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//ModuleType">
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference EDTImplementation.ecore#//ModuleType/Properties"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//ModuleType/pinfo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//ModuleType/operations"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//ModuleType/activatingFaultNotifs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//ModuleType/hasUserContext"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//ModuleType/hasWarmStartContext"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//ModuleType/isFaultHandler"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//ModuleType/name"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//ModuleOperation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//ModuleOperation/name"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//EventType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//EventType/input"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//RequestResponseType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//RequestResponseType/input"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//RequestResponseType/output"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//VersionedDataType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//VersionedDataType/maxVersions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//VersionedDataType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//Parameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//Parameter/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//Parameter/type"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//EventSent"/>
+    <genClasses ecoreClass="EDTImplementation.ecore#//EventReceived"/>
+    <genClasses ecoreClass="EDTImplementation.ecore#//VersionedDataWritten">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//VersionedDataWritten/writeOnly"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//VersionedDataRead">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//VersionedDataRead/notifying"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//RequestSent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//RequestSent/isSynchronous"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//RequestSent/maxConcurrentRequests"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//RequestSent/timeout"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//RequestReceived">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//RequestReceived/maxConcurrentRequests"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//ModuleImplementation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//ModuleImplementation/language"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//ModuleImplementation/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//ModuleImplementation/moduleType"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//Instance">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//Instance/moduleBehaviour"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//Instance/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//Instance/relativePriority"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//TriggerInstance">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//TriggerInstance/Operations"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//TriggerSender"/>
+    <genClasses ecoreClass="EDTImplementation.ecore#//DynamicTriggerInstance">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//DynamicTriggerInstance/parameter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//DynamicTriggerInstance/size"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference EDTImplementation.ecore#//DynamicTriggerInstance/Operations"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//DynamicTriggerEventReceiverInstance"/>
+    <genClasses ecoreClass="EDTImplementation.ecore#//DynamicTriggerEventSenderInstance"/>
+    <genClasses ecoreClass="EDTImplementation.ecore#//ModuleInstance">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//ModuleInstance/propertyValues"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//ModuleInstance/pinfo"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference EDTImplementation.ecore#//ModuleInstance/moduleType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//ModuleInstance/Operations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//ModuleInstance/moduleImplementation"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="EDTImplementation.ecore#//OperationInstance">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//OperationInstance/name"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//EventSenderInstance"/>
+    <genClasses ecoreClass="EDTImplementation.ecore#//EventReceiverInstance"/>
+    <genClasses ecoreClass="EDTImplementation.ecore#//RequestClientInstance"/>
+    <genClasses ecoreClass="EDTImplementation.ecore#//RequestServerInstance"/>
+    <genClasses ecoreClass="EDTImplementation.ecore#//DataWriterInstance"/>
+    <genClasses ecoreClass="EDTImplementation.ecore#//DataReaderInstance"/>
+    <genClasses image="false" ecoreClass="EDTImplementation.ecore#//ServRefOfLinkedComponentDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//ServRefOfLinkedComponentDefinition/Operations"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference EDTImplementation.ecore#//ServRefOfLinkedComponentDefinition/ServiceDefinitionLink"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//ServRefOfLinkedComponentDefinition/name"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//ReferenceOfLinkedComponentDefinition">
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference EDTImplementation.ecore#//ReferenceOfLinkedComponentDefinition/ComponentDefinitionReferenceLink"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//ServiceOfLinkedComponentDefinition">
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference EDTImplementation.ecore#//ServiceOfLinkedComponentDefinition/ComponentDefinitionServiceLink"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//EventDefinitionInstance"/>
+    <genClasses ecoreClass="EDTImplementation.ecore#//RequestReferenceInstance"/>
+    <genClasses ecoreClass="EDTImplementation.ecore#//RequestServiceInstance"/>
+    <genClasses ecoreClass="EDTImplementation.ecore#//VersionedDataReferenceInstance"/>
+    <genClasses ecoreClass="EDTImplementation.ecore#//VersionedDataServiceInstance"/>
+    <genClasses image="false" ecoreClass="EDTImplementation.ecore#//OperationLink">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//OperationLink/id"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//DataLink">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//DataLink/controlled"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//RequestLink"/>
+    <genClasses ecoreClass="EDTImplementation.ecore#//EventLink"/>
+    <genClasses image="false" ecoreClass="EDTImplementation.ecore#//DataLinkWriter"/>
+    <genClasses image="false" ecoreClass="EDTImplementation.ecore#//DataLinkReader"/>
+    <genClasses image="false" ecoreClass="EDTImplementation.ecore#//EventLinkSender"/>
+    <genClasses ecoreClass="EDTImplementation.ecore#//ExternalSenderOperation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//ExternalSenderOperation/language"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="EDTImplementation.ecore#//EventLinkReceiver"/>
+    <genClasses image="false" ecoreClass="EDTImplementation.ecore#//RequestLinkClient"/>
+    <genClasses image="false" ecoreClass="EDTImplementation.ecore#//RequestLinkServer"/>
+    <genClasses ecoreClass="EDTImplementation.ecore#//DataLinkActivatableFifo">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//DataLinkActivatableFifo/writer"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//DataLinkActivatableFifo/reader"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//DataLinkActivatableFifo/readerFifoSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//DataLinkActivatableFifo/readerActivating"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//DataLinkToServiceOperation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//DataLinkToServiceOperation/writer"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//DataLinkToServiceOperation/reader"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//EventLinkActivatableFifo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//EventLinkActivatableFifo/receiverFifoSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//EventLinkActivatableFifo/receiverActivating"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//EventLinkActivatableFifo/sender"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//EventLinkActivatableFifo/receiver"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//EventLinkActivatingFifo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//EventLinkActivatingFifo/receiverFifoSize"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//EventLinkActivatingFifo/sender"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//EventLinkActivatingFifo/receiver"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//EventLinkToDefinitionOperation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//EventLinkToDefinitionOperation/sender"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//EventLinkToDefinitionOperation/receiver"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//EventLinkToDefinitionOperationFromTrigger">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//EventLinkToDefinitionOperationFromTrigger/sender"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//EventLinkToDefinitionOperationFromTrigger/receiver"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//EventLinkToDefinitionOperationFromTrigger/triggerPeriod"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//EventLinkActivatingFifoFromTrigger">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//EventLinkActivatingFifoFromTrigger/receiverFifoSize"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//EventLinkActivatingFifoFromTrigger/sender"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//EventLinkActivatingFifoFromTrigger/receiver"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//EventLinkActivatingFifoFromTrigger/triggerPeriod"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//EventLinkActivatableFifoFromTrigger">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//EventLinkActivatableFifoFromTrigger/receiverFifoSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//EventLinkActivatableFifoFromTrigger/receiverActivating"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//EventLinkActivatableFifoFromTrigger/sender"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//EventLinkActivatableFifoFromTrigger/receiver"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//EventLinkActivatableFifoFromTrigger/triggerPeriod"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//RequestLinkActivatableFifo">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//RequestLinkActivatableFifo/client"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//RequestLinkActivatableFifo/server"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//RequestLinkActivatableFifo/serverFifoSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//RequestLinkActivatableFifo/serverActivating"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//RequestLinkActivatingActivatableFifo">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//RequestLinkActivatingActivatableFifo/client"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//RequestLinkActivatingActivatableFifo/server"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//RequestLinkActivatingActivatableFifo/clientActivating"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//RequestLinkActivatingActivatableFifo/serverFifoSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//RequestLinkActivatingActivatableFifo/serverActivating"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//RequestLinkActivatingToReferenceOperation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//RequestLinkActivatingToReferenceOperation/client"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//RequestLinkActivatingToReferenceOperation/server"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//RequestLinkActivatingToReferenceOperation/clientActivating"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//PublicPinfoValue">
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference EDTImplementation.ecore#//PublicPinfoValue/PublicPinfoFromModuleType"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//PrivatePinfoValue">
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference EDTImplementation.ecore#//PrivatePinfoValue/PrivatePinfoFromModuleType"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="EDTImplementation.ecore#//PinfoValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//PinfoValue/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//PinfoValue/name"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//PrivatePinfo"/>
+    <genClasses ecoreClass="EDTImplementation.ecore#//PublicPinfo"/>
+    <genClasses image="false" ecoreClass="EDTImplementation.ecore#//ModuleTypePinfo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//ModuleTypePinfo/name"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//PropertyValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//PropertyValue/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//PropertyValue/name"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference EDTImplementation.ecore#//PropertyValue/propertyType"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference EDTImplementation.ecore#//PropertyValue/ValueComponentDefinitionProperty"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTImplementation.ecore#//ModuleTypeProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTImplementation.ecore#//ModuleTypeProperty/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTImplementation.ecore#//ModuleTypeProperty/type"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="EDTImplementation.ecore#//Trigger"/>
+    <genClasses image="false" ecoreClass="EDTImplementation.ecore#//OperationInheritingFromSD">
+      <genFeatures property="Readonly" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference EDTImplementation.ecore#//OperationInheritingFromSD/SDOperationRef"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="EDTImplementation.ecore#//OperationInheritingFromMT">
+      <genFeatures property="Readonly" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference EDTImplementation.ecore#//OperationInheritingFromMT/MTOperationRef"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Edtlogical" disposableProviderFactory="true" ecorePackage="EDTLogicalSystem.ecore#/">
+    <genClasses ecoreClass="EDTLogicalSystem.ecore#//LogicalSystem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTLogicalSystem.ecore#//LogicalSystem/FileNamePrefix"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTLogicalSystem.ecore#//LogicalSystem/logicalComputingPlatforms"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTLogicalSystem.ecore#//LogicalSystem/logicalComputingPlatformLinks"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTLogicalSystem.ecore#//LogicalSystem/id"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTLogicalSystem.ecore#//LogicalComputingPlatform">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTLogicalSystem.ecore#//LogicalComputingPlatform/logicalComputingNodes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTLogicalSystem.ecore#//LogicalComputingPlatform/logicalComputingNodeLinks"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTLogicalSystem.ecore#//LogicalComputingPlatform/eLIPlatformId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTLogicalSystem.ecore#//LogicalComputingPlatform/id"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTLogicalSystem.ecore#//LogicalComputingPlatformLink">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTLogicalSystem.ecore#//LogicalComputingPlatformLink/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTLogicalSystem.ecore#//LogicalComputingPlatformLink/throughputMegaBytesPerSecond"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTLogicalSystem.ecore#//LogicalComputingPlatformLink/latencyMicroSeconds"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTLogicalSystem.ecore#//LogicalComputingPlatformLink/from"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTLogicalSystem.ecore#//LogicalComputingPlatformLink/to"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTLogicalSystem.ecore#//LogicalComputingPlatformLink/TransportBindingParameters"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTLogicalSystem.ecore#//LogicalComputingPlatformLink/TransportBindingProtocol"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTLogicalSystem.ecore#//LogicalComputingNodeLink">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTLogicalSystem.ecore#//LogicalComputingNodeLink/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTLogicalSystem.ecore#//LogicalComputingNodeLink/throughputMegaBytesPerSecond"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTLogicalSystem.ecore#//LogicalComputingNodeLink/latencyMicroSeconds"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTLogicalSystem.ecore#//LogicalComputingNodeLink/from"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTLogicalSystem.ecore#//LogicalComputingNodeLink/to"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTLogicalSystem.ecore#//LogicalComputingNode">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTLogicalSystem.ecore#//LogicalComputingNode/logicalProcessors"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTLogicalSystem.ecore#//LogicalComputingNode/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTLogicalSystem.ecore#//LogicalComputingNode/EndianessType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTLogicalSystem.ecore#//LogicalComputingNode/ModuleSwitchTimeMicroSeconds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTLogicalSystem.ecore#//LogicalComputingNode/AvailableMemoryGigaBytes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTLogicalSystem.ecore#//LogicalComputingNode/osName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTLogicalSystem.ecore#//LogicalComputingNode/osVersion"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference EDTLogicalSystem.ecore#//LogicalComputingNode/ProtectionDomainLink"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTLogicalSystem.ecore#//LogicalProcessor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTLogicalSystem.ecore#//LogicalProcessor/number"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTLogicalSystem.ecore#//LogicalProcessor/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTLogicalSystem.ecore#//LogicalProcessor/StepDurationNanoSeconds"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="EDTProject" disposableProviderFactory="true" ecorePackage="EDTProject2.ecore#/">
+    <genClasses ecoreClass="EDTProject2.ecore#//Steps">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTProject2.ecore#//Steps/Step"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTProject2.ecore#//Steps/OutputDirectory"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTProject2.ecore#//Step0">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTProject2.ecore#//Step0/Types"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference EDTProject2.ecore#//Step0/BasicTypes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTProject2.ecore#//Step0/EcoaPredefinedTypes"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTProject2.ecore#//Step1">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTProject2.ecore#//Step1/Services"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTProject2.ecore#//Step2">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTProject2.ecore#//Step2/ComponentDefinitions"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTProject2.ecore#//Step3">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTProject2.ecore#//Step3/InitialAssembly"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTProject2.ecore#//Step4">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTProject2.ecore#//Step4/ComponentImplementations"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTProject2.ecore#//Step5">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTProject2.ecore#//Step5/LogicalSystem"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTProject2.ecore#//Step5/Deployment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTProject2.ecore#//Step5/UDPBindings"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTProject2.ecore#//Step5/CrossPlatformView"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTProject2.ecore#//Step5/IDS"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference EDTProject2.ecore#//Step5/FinalAssembly"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTProject2.ecore#//Composite">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTProject2.ecore#//Composite/Properties"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTProject2.ecore#//Composite/Components"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTProject2.ecore#//Composite/Name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTProject2.ecore#//Composite/References"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTProject2.ecore#//Composite/Services"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTProject2.ecore#//Composite/targetNamespace"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTProject2.ecore#//Composite/ServiceLinks"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTProject2.ecore#//ComponentDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTProject2.ecore#//ComponentDefinition/Name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTProject2.ecore#//ComponentDefinition/Properties"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTProject2.ecore#//ComponentDefinition/References"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTProject2.ecore#//ComponentDefinition/Services"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference EDTProject2.ecore#//ComponentDefinition/AssociatedServiceQos"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTProject2.ecore#//Component">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTProject2.ecore#//Component/ComponentDefinition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTProject2.ecore#//Component/ComponentReferences"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTProject2.ecore#//Component/ComponentServices"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTProject2.ecore#//Component/Properties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTProject2.ecore#//Component/Name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTProject2.ecore#//Component/ComponentImplementation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTProject2.ecore#//Component/ComponentDefinitionVersion"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTProject2.ecore#//ComponentDefinitionReference">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTProject2.ecore#//ComponentDefinitionReference/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTProject2.ecore#//ComponentDefinitionReference/multiplicity"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTProject2.ecore#//ComponentDefinitionService">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTProject2.ecore#//ComponentDefinitionService/name"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTProject2.ecore#//Property">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTProject2.ecore#//Property/mustSupply"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute EDTProject2.ecore#//Property/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTProject2.ecore#//Property/name"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute EDTProject2.ecore#//Property/Value"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTProject2.ecore#//Property/ECOASCAType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTProject2.ecore#//Property/ECOASCALibrary"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTProject2.ecore#//ComponentProperty">
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference EDTProject2.ecore#//ComponentProperty/ComponentDefinitionProperty"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTProject2.ecore#//ComponentProperty/file"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference EDTProject2.ecore#//ComponentProperty/SourceProperty"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTProject2.ecore#//ComponentProperty/source"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTProject2.ecore#//ComponentProperty/Value"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute EDTProject2.ecore#//ComponentProperty/Name"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTProject2.ecore#//Step">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute EDTProject2.ecore#//Step/FolderName"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTProject2.ecore#//ComponentReference">
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference EDTProject2.ecore#//ComponentReference/ComponentDefinitionReference"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTProject2.ecore#//ComponentReference/multiplicity"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute EDTProject2.ecore#//ComponentReference/Name"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTProject2.ecore#//ComponentService">
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference EDTProject2.ecore#//ComponentService/ComponentDefinitionService"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute EDTProject2.ecore#//ComponentService/Name"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTProject2.ecore#//CompositeReference">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTProject2.ecore#//CompositeReference/multiplicity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTProject2.ecore#//CompositeReference/promote"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTProject2.ecore#//CompositeReference/name"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTProject2.ecore#//CompositeService">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTProject2.ecore#//CompositeService/promote"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTProject2.ecore#//CompositeService/name"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTProject2.ecore#//Contract">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTProject2.ecore#//Contract/Syntax"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTProject2.ecore#//Contract/Qos"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTProject2.ecore#//FinalAssembly">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTProject2.ecore#//FinalAssembly/FinalAssembly"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTProject2.ecore#//FinalAssembly/Name"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTProject2.ecore#//OutputDirectory">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTProject2.ecore#//OutputDirectory/name"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTProject2.ecore#//ServiceLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTProject2.ecore#//ServiceLink/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTProject2.ecore#//ServiceLink/target"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Edtqos" ecorePackage="EDTQos.ecore#/">
+    <genClasses ecoreClass="EDTQos.ecore#//ServiceInstanceQos">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTQos.ecore#//ServiceInstanceQos/operations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTQos.ecore#//ServiceInstanceQos/ServiceDefinition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTQos.ecore#//ServiceInstanceQos/Name"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference EDTQos.ecore#//ServiceInstanceQos/InterfaceLink"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="EDTQos.ecore#//Operation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTQos.ecore#//Operation/highestRateNumberOfOccurrences"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTQos.ecore#//Operation/highestRateTimeFrame"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTQos.ecore#//Operation/lowestRateNumberOfOccurrences"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTQos.ecore#//Operation/lowestRateTimeFrame"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute EDTQos.ecore#//Operation/name"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTQos.ecore#//Data">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTQos.ecore#//Data/maxAgeing"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTQos.ecore#//Data/notificationMaxHandlingTime"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference EDTQos.ecore#//Data/ServiceDefinitionData"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTQos.ecore#//Event">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTQos.ecore#//Event/maxHandlingTime"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference EDTQos.ecore#//Event/ServiceDefinitionEvent"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTQos.ecore#//RequestResponse">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTQos.ecore#//RequestResponse/callbackMaxHandlingTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTQos.ecore#//RequestResponse/maxResponseTime"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference EDTQos.ecore#//RequestResponse/ServiceDefinitionRequestResponse"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="EDTInterface" resource="XML" disposableProviderFactory="true"
+      ecorePackage="EDTServices.ecore#/">
+    <genClasses ecoreClass="EDTServices.ecore#//ServiceDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTServices.ecore#//ServiceDefinition/Name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTServices.ecore#//ServiceDefinition/operations"/>
+      <genFeatures children="true" createChild="true" ecoreFeature="ecore:EReference EDTServices.ecore#//ServiceDefinition/usedLibraries"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="EDTServices.ecore#//OperationType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTServices.ecore#//OperationType/comment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTServices.ecore#//OperationType/name"/>
+      <genOperations ecoreOperation="EDTServices.ecore#//OperationType/nameIsUnique">
+        <genParameters ecoreParameter="EDTServices.ecore#//OperationType/nameIsUnique/chain"/>
+        <genParameters ecoreParameter="EDTServices.ecore#//OperationType/nameIsUnique/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="EDTServices.ecore#//Data">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTServices.ecore#//Data/type"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTServices.ecore#//Event">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTServices.ecore#//Event/input"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTServices.ecore#//Event/direction"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTServices.ecore#//RequestResponse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTServices.ecore#//RequestResponse/input"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTServices.ecore#//RequestResponse/output"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTServices.ecore#//Parameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTServices.ecore#//Parameter/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTServices.ecore#//Parameter/type"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="EDTType" disposableProviderFactory="true" ecorePackage="EDTTypes.ecore#/">
+    <genClasses image="false" ecoreClass="EDTTypes.ecore#//EDTDataType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTTypes.ecore#//EDTDataType/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTTypes.ecore#//EDTDataType/Comment"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTTypes.ecore#//Simple">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTTypes.ecore#//Simple/maxRange"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTTypes.ecore#//Simple/minRange"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTTypes.ecore#//Simple/precision"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTTypes.ecore#//Simple/unit"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTTypes.ecore#//Simple/Type"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference EDTTypes.ecore#//Simple/maxRangeType"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference EDTTypes.ecore#//Simple/minRangeType"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference EDTTypes.ecore#//Simple/precisionType"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTTypes.ecore#//Record">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTTypes.ecore#//Record/field"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTTypes.ecore#//Constant">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTTypes.ecore#//Constant/value"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTTypes.ecore#//Constant/Type"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference EDTTypes.ecore#//Constant/valueType"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTTypes.ecore#//VariantRecord">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTTypes.ecore#//VariantRecord/field"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTTypes.ecore#//VariantRecord/union"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTTypes.ecore#//VariantRecord/selectName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTTypes.ecore#//VariantRecord/SelectType"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTTypes.ecore#//Array">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTTypes.ecore#//Array/maxNumber"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTTypes.ecore#//Array/ItemType"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference EDTTypes.ecore#//Array/maxNumberType"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTTypes.ecore#//FixedArray">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTTypes.ecore#//FixedArray/maxNumber"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTTypes.ecore#//FixedArray/ItemType"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference EDTTypes.ecore#//FixedArray/maxNumberType"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTTypes.ecore#//Enum">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTTypes.ecore#//Enum/value"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTTypes.ecore#//Enum/Type"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTTypes.ecore#//BasicType"/>
+    <genClasses ecoreClass="EDTTypes.ecore#//Library">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTTypes.ecore#//Library/DataTypes"/>
+      <genFeatures children="true" createChild="true" ecoreFeature="ecore:EReference EDTTypes.ecore#//Library/usedLibraries"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTTypes.ecore#//Library/Name"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTTypes.ecore#//Union">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTTypes.ecore#//Union/comment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTTypes.ecore#//Union/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTTypes.ecore#//Union/when"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTTypes.ecore#//Union/type"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTTypes.ecore#//Field">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTTypes.ecore#//Field/comment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTTypes.ecore#//Field/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTTypes.ecore#//Field/Type"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTTypes.ecore#//EnumValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTTypes.ecore#//EnumValue/comment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTTypes.ecore#//EnumValue/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTTypes.ecore#//EnumValue/valnum"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference EDTTypes.ecore#//EnumValue/valnumType"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="EDTTypes.ecore#//PredefinedType"/>
+    <genClasses ecoreClass="EDTTypes.ecore#//EnumPredefined">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTTypes.ecore#//EnumPredefined/value"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTTypes.ecore#//EnumPredefined/Type"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTTypes.ecore#//EnumValuePredefined">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTTypes.ecore#//EnumValuePredefined/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTTypes.ecore#//EnumValuePredefined/valnum"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTTypes.ecore#//RecordPredefined">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTTypes.ecore#//RecordPredefined/field"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTTypes.ecore#//FieldPredefined">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTTypes.ecore#//FieldPredefined/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTTypes.ecore#//FieldPredefined/Type"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTTypes.ecore#//SimplePredefined">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTTypes.ecore#//SimplePredefined/Type"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTTypes.ecore#//ArrayPredefined">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTTypes.ecore#//ArrayPredefined/maxNumber"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTTypes.ecore#//ArrayPredefined/ItemType"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Temp" disposableProviderFactory="true" ecorePackage="toConvert.ecore#/">
+    <genClasses ecoreClass="toConvert.ecore#//ModuleBehaviour">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute toConvert.ecore#//ModuleBehaviour/Name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference toConvert.ecore#//ModuleBehaviour/ModuleBehaviour"/>
+    </genClasses>
+    <genClasses ecoreClass="toConvert.ecore#//InsertionPolicies">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference toConvert.ecore#//InsertionPolicies/InsertionPolicy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute toConvert.ecore#//InsertionPolicies/Name"/>
+    </genClasses>
+    <genClasses ecoreClass="toConvert.ecore#//CrossPlatformView">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference toConvert.ecore#//CrossPlatformView/ECOACrossPlatformView"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute toConvert.ecore#//CrossPlatformView/Name"/>
+    </genClasses>
+    <genClasses ecoreClass="toConvert.ecore#//EUID">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference toConvert.ecore#//EUID/UID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute toConvert.ecore#//EUID/Name"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Edtudp" ecorePackage="UDPBinding.ecore#/">
+    <genClasses ecoreClass="UDPBinding.ecore#//UDPBinding">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UDPBinding.ecore#//UDPBinding/Name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UDPBinding.ecore#//UDPBinding/platform"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Edtuid" ecorePackage="EDTUID.ecore#/">
+    <genClasses ecoreClass="EDTUID.ecore#//IDMap">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTUID.ecore#//IDMap/Name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EDTUID.ecore#//IDMap/IDs"/>
+    </genClasses>
+    <genClasses ecoreClass="EDTUID.ecore#//ID">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EDTUID.ecore#//ID/value"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTUID.ecore#//ID/Operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EDTUID.ecore#//ID/ServiceLink"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

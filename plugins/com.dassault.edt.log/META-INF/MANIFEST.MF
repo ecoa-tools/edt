@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Log
+Bundle-SymbolicName: com.dassault.edt.log
+Bundle-Version: 1.0.0.qualifier
+Export-Package: com.dassault.edt.log
+Require-Bundle: org.eclipse.jface,
+ org.eclipse.ui.console
+Import-Package: org.apache.log4j
+Bundle-Vendor: DASSAULT
+Automatic-Module-Name: com.dassault.edt.log
+Bundle-RequiredExecutionEnvironment: JavaSE-17

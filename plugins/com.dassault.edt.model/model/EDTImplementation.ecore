@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="edtimplementation" nsURI="edtimplementation" nsPrefix="edtimplementation">
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentImplementation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="usedLibraries" upperBound="-1"
+        eType="ecore:EClass EDTTypes.ecore#//Library"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="AssociatedServiceQos" upperBound="-1"
+        eType="ecore:EClass EDTQos.ecore#//ServiceInstanceQos" changeable="false"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="services" upperBound="-1"
+        eType="#//ComponentImplementationService" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="references" upperBound="-1"
+        eType="#//ComponentImplementationReference" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//NCName"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="componentDefinition" lowerBound="1"
+        eType="ecore:EClass EDTProject2.ecore#//ComponentDefinition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ModuleTypes" upperBound="-1"
+        eType="#//ModuleType" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="moduleImplementations"
+        upperBound="-1" eType="#//ModuleImplementation" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instances" upperBound="-1"
+        eType="#//Instance" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ComponentDefinitionReferences"
+        upperBound="-1" eType="#//ReferenceOfLinkedComponentDefinition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ComponentDefinitionServices"
+        upperBound="-1" eType="#//ServiceOfLinkedComponentDefinition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="OperationLinks" upperBound="-1"
+        eType="#//OperationLink" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ExternalSenders" upperBound="-1"
+        eType="#//ExternalSenderOperation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ModuleBehaviours" upperBound="-1"
+        eType="ecore:EClass toConvert.ecore#//ModuleBehaviour" changeable="false"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="binDesc" upperBound="-1"
+        eType="ecore:EClass EDTBinDesc.ecore#//BinDesc" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="insertionPolicyList" lowerBound="1"
+        eType="ecore:EClass toConvert.ecore#//InsertionPolicies" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentImplementationReference">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="newQos" lowerBound="1"
+        eType="ecore:EClass EDTQos.ecore#//ServiceInstanceQos"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ComponentDefinitionReference"
+        lowerBound="1" eType="ecore:EClass EDTProject2.ecore#//ComponentDefinitionReference"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentImplementationService">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="newQos" lowerBound="1"
+        eType="ecore:EClass EDTQos.ecore#//ServiceInstanceQos"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ComponentDefinitionService"
+        lowerBound="1" eType="ecore:EClass EDTProject2.ecore#//ComponentDefinitionService"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModuleType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Properties" lowerBound="1"
+        upperBound="-1" eType="#//ModuleTypeProperty" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pinfo" upperBound="-1"
+        eType="#//ModuleTypePinfo" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operations" lowerBound="1"
+        upperBound="-1" eType="#//ModuleOperation" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="activatingFaultNotifs"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        defaultValueLiteral="true" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hasUserContext" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        defaultValueLiteral="true" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hasWarmStartContext" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        defaultValueLiteral="true" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isFaultHandler" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        defaultValueLiteral="false" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType ../../com.dassault.ecoa.model/model/implementation.ecore#//NameId"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModuleOperation" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType ../../com.dassault.ecoa.model/model/types.ecore#//NameId"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EventType" eSuperTypes="#//ModuleOperation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="input" upperBound="-1"
+        eType="#//Parameter" containment="true" resolveProxies="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RequestResponseType" eSuperTypes="#//ModuleOperation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="input" upperBound="-1"
+        eType="#//Parameter" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="output" upperBound="-1"
+        eType="#//Parameter" containment="true" resolveProxies="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VersionedDataType" eSuperTypes="#//ModuleOperation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxVersions" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//PositiveInteger"
+        defaultValueLiteral="1" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="ecore:EClass EDTTypes.ecore#//EDTDataType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Parameter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType ../../com.dassault.ecoa.model/model/interface.ecore#//NameId"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="ecore:EClass EDTTypes.ecore#//EDTDataType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EventSent" eSuperTypes="#//EventType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EventReceived" eSuperTypes="#//EventType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VersionedDataWritten" eSuperTypes="#//VersionedDataType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="writeOnly" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        defaultValueLiteral="false" unsettable="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VersionedDataRead" eSuperTypes="#//VersionedDataType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="notifying" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        defaultValueLiteral="false" unsettable="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RequestSent" eSuperTypes="#//RequestResponseType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isSynchronous" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxConcurrentRequests"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//PositiveInteger"
+        defaultValueLiteral="10" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeout" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Double" unsettable="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RequestReceived" eSuperTypes="#//RequestResponseType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxConcurrentRequests"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//PositiveInteger"
+        defaultValueLiteral="10" unsettable="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModuleImplementation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="language" lowerBound="1"
+        eType="ecore:EEnum ../../com.dassault.ecoa.model/model/implementation.ecore#//ProgrammingLanguage"
+        unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType ../../com.dassault.ecoa.model/model/implementation.ecore#//NameId"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="moduleType" lowerBound="1"
+        eType="#//ModuleType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Instance" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="moduleBehaviour" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//AnyURI"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType ../../com.dassault.ecoa.model/model/implementation.ecore#//NameId"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="relativePriority" lowerBound="1"
+        eType="ecore:EDataType ../../com.dassault.ecoa.model/model/implementation.ecore#//RelativePriority"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TriggerInstance" eSuperTypes="#//Trigger">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Operations" lowerBound="1"
+        eType="#//OperationInstance" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TriggerSender" eSuperTypes="#//EventLinkSender"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DynamicTriggerInstance" eSuperTypes="#//Trigger">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" upperBound="-1"
+        eType="#//Parameter" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//PositiveInteger"
+        defaultValueLiteral="1" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Operations" lowerBound="3"
+        upperBound="3" eType="#//OperationInstance" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DynamicTriggerEventReceiverInstance"
+      eSuperTypes="#//EventLinkReceiver"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DynamicTriggerEventSenderInstance" eSuperTypes="#//EventLinkSender"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ModuleInstance" eSuperTypes="#//Instance">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="propertyValues" upperBound="-1"
+        eType="#//PropertyValue" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pinfo" upperBound="-1"
+        eType="#//PinfoValue" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="moduleType" lowerBound="1"
+        eType="#//ModuleType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Operations" lowerBound="1"
+        upperBound="-1" eType="#//OperationInstance" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="moduleImplementation" lowerBound="1"
+        eType="#//ModuleImplementation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OperationInstance" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType ../../com.dassault.ecoa.model/model/implementation.ecore#//NameId"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EventSenderInstance" eSuperTypes="#//EventLinkSender #//OperationInheritingFromMT"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EventReceiverInstance" eSuperTypes="#//EventLinkReceiver #//OperationInheritingFromMT"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RequestClientInstance" eSuperTypes="#//RequestLinkClient #//OperationInheritingFromMT"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RequestServerInstance" eSuperTypes="#//RequestLinkServer #//OperationInheritingFromMT"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataWriterInstance" eSuperTypes="#//DataLinkWriter #//OperationInheritingFromMT"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataReaderInstance" eSuperTypes="#//DataLinkReader #//OperationInheritingFromMT"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ServRefOfLinkedComponentDefinition"
+      abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Operations" lowerBound="1"
+        upperBound="-1" eType="#//OperationInstance" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ServiceDefinitionLink"
+        lowerBound="1" eType="ecore:EClass EDTServices.ecore#//ServiceDefinition"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//NCName"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReferenceOfLinkedComponentDefinition"
+      eSuperTypes="#//ServRefOfLinkedComponentDefinition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ComponentDefinitionReferenceLink"
+        lowerBound="1" eType="ecore:EClass EDTProject2.ecore#//ComponentDefinitionReference"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceOfLinkedComponentDefinition"
+      eSuperTypes="#//ServRefOfLinkedComponentDefinition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ComponentDefinitionServiceLink"
+        lowerBound="1" eType="ecore:EClass EDTProject2.ecore#//ComponentDefinitionService"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EventDefinitionInstance" eSuperTypes="#//EventLinkReceiver #//EventLinkSender #//OperationInheritingFromSD"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RequestReferenceInstance" eSuperTypes="#//RequestLinkServer #//OperationInheritingFromSD"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RequestServiceInstance" eSuperTypes="#//RequestLinkClient #//OperationInheritingFromSD"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VersionedDataReferenceInstance" eSuperTypes="#//DataLinkWriter #//OperationInheritingFromSD"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VersionedDataServiceInstance" eSuperTypes="#//DataLinkReader #//OperationInheritingFromSD"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OperationLink" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int"
+        unsettable="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataLink" abstract="true" interface="true"
+      eSuperTypes="#//OperationLink">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="controlled" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        defaultValueLiteral="true" unsettable="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RequestLink" abstract="true" interface="true"
+      eSuperTypes="#//OperationLink"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EventLink" abstract="true" interface="true"
+      eSuperTypes="#//OperationLink"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataLinkWriter" abstract="true" interface="true"
+      eSuperTypes="#//OperationInstance"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataLinkReader" abstract="true" interface="true"
+      eSuperTypes="#//OperationInstance"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EventLinkSender" abstract="true" interface="true"
+      eSuperTypes="#//OperationInstance"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExternalSenderOperation" eSuperTypes="#//EventLinkSender">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="language" lowerBound="1"
+        eType="ecore:EEnum ../../com.dassault.ecoa.model/model/implementation.ecore#//ProgrammingLanguage"
+        unsettable="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EventLinkReceiver" abstract="true" interface="true"
+      eSuperTypes="#//OperationInstance"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RequestLinkClient" abstract="true" interface="true"
+      eSuperTypes="#//OperationInstance"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RequestLinkServer" abstract="true" interface="true"
+      eSuperTypes="#//OperationInstance"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataLinkActivatableFifo" eSuperTypes="#//DataLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="writer" lowerBound="1"
+        eType="#//DataLinkWriter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reader" lowerBound="1"
+        eType="#//DataReaderInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="readerFifoSize" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//PositiveInteger"
+        defaultValueLiteral="8" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="readerActivating" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        defaultValueLiteral="true" unsettable="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataLinkToServiceOperation" eSuperTypes="#//DataLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="writer" lowerBound="1"
+        eType="#//DataWriterInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reader" lowerBound="1"
+        eType="#//VersionedDataServiceInstance"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EventLinkActivatableFifo" eSuperTypes="#//EventLink">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="receiverFifoSize" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//PositiveInteger"
+        defaultValueLiteral="8" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="receiverActivating" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        defaultValueLiteral="true" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sender" lowerBound="1"
+        eType="#//EventLinkSender"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="receiver" lowerBound="1"
+        eType="#//EventReceiverInstance"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EventLinkActivatingFifo" eSuperTypes="#//EventLink">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="receiverFifoSize" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//PositiveInteger"
+        defaultValueLiteral="8" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sender" lowerBound="1"
+        eType="#//EventLinkSender"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="receiver" lowerBound="1"
+        eType="#//DynamicTriggerEventReceiverInstance"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EventLinkToDefinitionOperation" eSuperTypes="#//EventLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sender" lowerBound="1"
+        eType="#//EventLinkSender"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="receiver" lowerBound="1"
+        eType="#//EventDefinitionInstance"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EventLinkToDefinitionOperationFromTrigger"
+      eSuperTypes="#//EventLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sender" lowerBound="1"
+        eType="#//TriggerSender"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="receiver" lowerBound="1"
+        eType="#//EventDefinitionInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="triggerPeriod" lowerBound="1"
+        eType="ecore:EDataType ../../com.dassault.ecoa.model/model/implementation.ecore#//TimeDuration"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EventLinkActivatingFifoFromTrigger"
+      eSuperTypes="#//EventLink">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="receiverFifoSize" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//PositiveInteger"
+        defaultValueLiteral="8" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sender" lowerBound="1"
+        eType="#//TriggerSender"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="receiver" lowerBound="1"
+        eType="#//DynamicTriggerEventReceiverInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="triggerPeriod" lowerBound="1"
+        eType="ecore:EDataType ../../com.dassault.ecoa.model/model/implementation.ecore#//TimeDuration"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EventLinkActivatableFifoFromTrigger"
+      eSuperTypes="#//EventLink">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="receiverFifoSize" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//PositiveInteger"
+        defaultValueLiteral="8" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="receiverActivating" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        defaultValueLiteral="true" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sender" lowerBound="1"
+        eType="#//TriggerSender"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="receiver" lowerBound="1"
+        eType="#//EventReceiverInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="triggerPeriod" lowerBound="1"
+        eType="ecore:EDataType ../../com.dassault.ecoa.model/model/implementation.ecore#//TimeDuration"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RequestLinkActivatableFifo" eSuperTypes="#//RequestLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="client" lowerBound="1"
+        eType="#//RequestServiceInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="server" lowerBound="1"
+        eType="#//RequestServerInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="serverFifoSize" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//PositiveInteger"
+        defaultValueLiteral="8" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="serverActivating" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        defaultValueLiteral="true" unsettable="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RequestLinkActivatingActivatableFifo"
+      eSuperTypes="#//RequestLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="client" lowerBound="1"
+        eType="#//RequestClientInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="server" lowerBound="1"
+        eType="#//RequestServerInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="clientActivating" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        defaultValueLiteral="true" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="serverFifoSize" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//PositiveInteger"
+        defaultValueLiteral="8" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="serverActivating" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        defaultValueLiteral="true" unsettable="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RequestLinkActivatingToReferenceOperation"
+      eSuperTypes="#//RequestLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="client" lowerBound="1"
+        eType="#//RequestClientInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="server" lowerBound="1"
+        eType="#//RequestReferenceInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="clientActivating" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        defaultValueLiteral="true" unsettable="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PublicPinfoValue" eSuperTypes="#//PinfoValue">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="PublicPinfoFromModuleType"
+        lowerBound="1" eType="#//PublicPinfo"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PrivatePinfoValue" eSuperTypes="#//PinfoValue">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="PrivatePinfoFromModuleType"
+        lowerBound="1" eType="#//PrivatePinfo"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PinfoValue" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PrivatePinfo" eSuperTypes="#//ModuleTypePinfo"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PublicPinfo" eSuperTypes="#//ModuleTypePinfo"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ModuleTypePinfo" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType ../../com.dassault.ecoa.model/model/implementation.ecore#//NameId"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PropertyValue">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="propertyType" lowerBound="1"
+        eType="#//ModuleTypeProperty"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ValueComponentDefinitionProperty"
+        eType="ecore:EClass EDTProject2.ecore#//Property"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModuleTypeProperty">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType ../../com.dassault.ecoa.model/model/interface.ecore#//NameId"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="ecore:EClass EDTTypes.ecore#//EDTDataType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Trigger" abstract="true" interface="true"
+      eSuperTypes="#//Instance"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OperationInheritingFromSD" abstract="true"
+      interface="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SDOperationRef" lowerBound="1"
+        eType="ecore:EClass EDTServices.ecore#//OperationType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OperationInheritingFromMT" abstract="true"
+      interface="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="MTOperationRef" lowerBound="1"
+        eType="#//ModuleOperation"/>
+  </eClassifiers>
+</ecore:EPackage>

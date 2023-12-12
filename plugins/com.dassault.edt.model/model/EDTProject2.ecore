@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="edtproject" nsURI="EDTProject2" nsPrefix="EDTProject2">
+  <eClassifiers xsi:type="ecore:EClass" name="Steps">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Step" upperBound="6" eType="#//Step"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="OutputDirectory" lowerBound="1"
+        eType="#//OutputDirectory" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Step0" eSuperTypes="#//Step">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Types" upperBound="-1"
+        eType="ecore:EClass EDTTypes.ecore#//Library" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="BasicTypes" upperBound="-1"
+        eType="ecore:EClass EDTTypes.ecore#//BasicType" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="EcoaPredefinedTypes" lowerBound="1"
+        upperBound="-1" eType="ecore:EClass EDTTypes.ecore#//PredefinedType" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Step1" eSuperTypes="#//Step">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Services" upperBound="-1"
+        eType="ecore:EClass EDTServices.ecore#//ServiceDefinition" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Step2" eSuperTypes="#//Step">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ComponentDefinitions" upperBound="-1"
+        eType="#//ComponentDefinition" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Step3" eSuperTypes="#//Step">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="InitialAssembly" eType="#//Composite"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Step4" eSuperTypes="#//Step">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ComponentImplementations"
+        upperBound="-1" eType="ecore:EClass EDTImplementation.ecore#//ComponentImplementation"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Step5" eSuperTypes="#//Step">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="LogicalSystem" lowerBound="1"
+        eType="ecore:EClass EDTLogicalSystem.ecore#//LogicalSystem" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Deployment" lowerBound="1"
+        eType="ecore:EClass EDTDeployment.ecore#//Deployment" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="UDPBindings" upperBound="-1"
+        eType="ecore:EClass UDPBinding.ecore#//UDPBinding" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CrossPlatformView" eType="ecore:EClass toConvert.ecore#//CrossPlatformView"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="IDS" upperBound="-1" eType="ecore:EClass EDTUID.ecore#//IDMap"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="FinalAssembly" lowerBound="1"
+        eType="#//FinalAssembly" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Composite">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Properties" upperBound="-1"
+        eType="#//Property" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Components" upperBound="-1"
+        eType="#//Component" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//NCName"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="References" upperBound="-1"
+        eType="#//CompositeReference" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Services" upperBound="-1"
+        eType="#//CompositeService" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetNamespace" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ServiceLinks" upperBound="-1"
+        eType="#//ServiceLink" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentDefinition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//NCName"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Properties" upperBound="-1"
+        eType="#//Property" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="References" upperBound="-1"
+        eType="#//ComponentDefinitionReference" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Services" upperBound="-1"
+        eType="#//ComponentDefinitionService" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="AssociatedServiceQos" upperBound="-1"
+        eType="ecore:EClass EDTQos.ecore#//ServiceInstanceQos" changeable="false"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Component">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ComponentDefinition" lowerBound="1"
+        eType="#//ComponentDefinition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ComponentReferences" upperBound="-1"
+        eType="#//ComponentReference" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ComponentServices" upperBound="-1"
+        eType="#//ComponentService" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Properties" upperBound="-1"
+        eType="#//ComponentProperty" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//NCName"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ComponentImplementation"
+        lowerBound="1" eType="ecore:EClass EDTImplementation.ecore#//ComponentImplementation"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ComponentDefinitionVersion"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentDefinitionReference" eSuperTypes="#//Contract">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//NCName"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicity" eType="ecore:EEnum ../../com.dassault.ecoa.model/model/sca.ecore#//Multiplicity"
+        defaultValueLiteral="1..1" unsettable="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentDefinitionService" eSuperTypes="#//Contract">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//NCName"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Property">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mustSupply" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        defaultValueLiteral="false" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//NCName"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Value" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ECOASCAType" lowerBound="1"
+        eType="ecore:EClass EDTTypes.ecore#//EDTDataType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ECOASCALibrary" eType="ecore:EClass EDTTypes.ecore#//Library"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentProperty">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ComponentDefinitionProperty"
+        lowerBound="1" eType="#//Property"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="file" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//AnyURI"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SourceProperty" lowerBound="1"
+        eType="#//Property"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="source" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Value" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//NCName"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Step" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="FolderName" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentReference">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ComponentDefinitionReference"
+        lowerBound="1" eType="#//ComponentDefinitionReference"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicity" eType="ecore:EEnum ../../com.dassault.ecoa.model/model/sca.ecore#//Multiplicity"
+        defaultValueLiteral="1..1" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//NCName"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentService">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ComponentDefinitionService"
+        lowerBound="1" eType="#//ComponentDefinitionService"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//NCName"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CompositeReference" eSuperTypes="#//Contract">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicity" lowerBound="1"
+        eType="ecore:EEnum ../../com.dassault.ecoa.model/model/sca.ecore#//Multiplicity"
+        unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="promote" lowerBound="1"
+        eType="ecore:EDataType ../../com.dassault.ecoa.model/model/sca.ecore#//ListOfAnyURIs"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//NCName"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CompositeService" eSuperTypes="#//Contract">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="promote" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//AnyURI"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//NCName"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Contract">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Syntax" lowerBound="1"
+        eType="ecore:EClass EDTServices.ecore#//ServiceDefinition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Qos" eType="ecore:EClass EDTQos.ecore#//ServiceInstanceQos"
+        eOpposite="EDTQos.ecore#//ServiceInstanceQos/InterfaceLink"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FinalAssembly">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="FinalAssembly" lowerBound="1"
+        eType="#//Composite"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OutputDirectory">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//ComponentReference"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//ComponentService"/>
+  </eClassifiers>
+</ecore:EPackage>

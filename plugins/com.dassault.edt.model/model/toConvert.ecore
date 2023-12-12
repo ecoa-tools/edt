@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="temp" nsURI="temp" nsPrefix="temp">
+  <eClassifiers xsi:type="ecore:EClass" name="ModuleBehaviour">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Name"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ModuleBehaviour" lowerBound="1"
+        eType="ecore:EClass ../../com.dassault.ecoa.model/model/moduleBehaviour.ecore#//ModuleBehaviour"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InsertionPolicies">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="InsertionPolicy" lowerBound="1"
+        eType="ecore:EClass ../../com.dassault.ecoa.model/model/insertionPolicy.ecore#//InsertionPolicyList"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Name"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CrossPlatformView">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ECOACrossPlatformView"
+        eType="ecore:EClass ../../com.dassault.ecoa.model/model/view.ecore#//View"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Name"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EUID">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="UID" lowerBound="1" eType="ecore:EClass ../../com.dassault.ecoa.model/model/uid.ecore#//IDMap"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Name"/>
+  </eClassifiers>
+</ecore:EPackage>

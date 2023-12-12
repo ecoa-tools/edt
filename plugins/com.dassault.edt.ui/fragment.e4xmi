@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:commands="http://www.eclipse.org/ui/2010/UIModel/application/commands" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_BxaXACerEeWxCPrV0pAZQQ">
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_QqSikIrOEeW7h_qdP9N9fw" featurename="commands" parentElementId="xpath:/">
+    <elements xsi:type="commands:Command" xmi:id="_89V-EKeEEe285OEpj84Gyg" elementId="com.dassault.edt.ui.command.new" commandName="New"/>
+    <elements xsi:type="commands:Command" xmi:id="_IO7nEKeFEe285OEpj84Gyg" elementId="com.dassault.edt.ui.command.open" commandName="Open"/>
+    <elements xsi:type="commands:Command" xmi:id="_JBMxgKeFEe285OEpj84Gyg" elementId="com.dassault.edt.ui.command.save" commandName="Save"/>
+    <elements xsi:type="commands:Command" xmi:id="_KKhKAKeFEe285OEpj84Gyg" elementId="com.dassault.edt.ui.command.delete" commandName="Delete"/>
+    <elements xsi:type="commands:Command" xmi:id="_LL5ugKeFEe285OEpj84Gyg" elementId="com.dassault.edt.ui.command.import" commandName="Import"/>
+    <elements xsi:type="commands:Command" xmi:id="_xDmJMAB2Ee67mtmLEW-yjw" elementId="com.dassault.edt.ui.command.partialimport" commandName="Partial Import"/>
+    <elements xsi:type="commands:Command" xmi:id="_MGNaoKeFEe285OEpj84Gyg" elementId="com.dassault.edt.ui.command.export" commandName="Export"/>
+    <elements xsi:type="commands:Command" xmi:id="_NgBtQKeFEe285OEpj84Gyg" elementId="com.dassault.edt.ui.command.quit" commandName="Quit"/>
+    <elements xsi:type="commands:Command" xmi:id="_vKO-EKeFEe2yd95DFVQ4LA" elementId="com.dassault.edt.ui.command.openTreeView" commandName="Open Tree View"/>
+    <elements xsi:type="commands:Command" xmi:id="_c7YW4LOMEe24CNZ8jV-tGQ" elementId="com.dassault.edt.ui.command.openAssemblyGraphicalView" commandName="Open Assembly Graphical View"/>
+    <elements xsi:type="commands:Command" xmi:id="_xAeG8KeFEe2yd95DFVQ4LA" elementId="com.dassault.edt.ui.command.openProperties" commandName="Open Properties"/>
+    <elements xsi:type="commands:Command" xmi:id="_uAZU0LayEe2hf8Dkfd6y2Q" elementId="com.dassault.edt.ui.command.openConsole" commandName="Open Console"/>
+    <elements xsi:type="commands:Command" xmi:id="_2Fnb0KeFEe2yd95DFVQ4LA" elementId="com.dassault.edt.ui.command.versions" commandName="Version"/>
+    <elements xsi:type="commands:Command" xmi:id="_23BDkKeFEe2yd95DFVQ4LA" elementId="com.dassault.edt.ui.command.licenses" commandName="Licenses"/>
+    <elements xsi:type="commands:Command" xmi:id="_dHXyMLOREe2CAtPSxCmvnA" elementId="com.dassault.edt.ui.command.close" commandName="Close"/>
+    <elements xsi:type="commands:Command" xmi:id="_0j9PcM7PEe2sm_L787R9bw" elementId="com.dassault.edt.ui.command.rename" commandName="Rename"/>
+    <elements xsi:type="commands:Command" xmi:id="_U74PwOXLEe21F9xtfNZLcg" elementId="com.dassault.edt.ui.command.openLogicalSystemAndDeploymentSchemaGraphicalView" commandName="Open Logical System And Deployment Schema Graphical View"/>
+    <elements xsi:type="commands:Command" xmi:id="_bDRjUOTwEe2wSoi6bsYZ8g" elementId="com.dassault.edt.ui.command.outline" commandName="Outline"/>
+    <elements xsi:type="commands:Command" xmi:id="_xuqjQO8OEe2azdx14gXd-A" elementId="com.dassault.edt.ui.command.enableGraphicalErrorDisplay" commandName="Enable Graphical Error Display"/>
+    <elements xsi:type="commands:Command" xmi:id="_wXJgQO8aEe2azdx14gXd-A" elementId="com.dassault.edt.ui.command.disableGraphicalErrorDisplay" commandName="Disable Graphical Error Display"/>
+    <elements xsi:type="commands:Command" xmi:id="_OecUkCY9Ee6Gz9QQ2_ACXQ" elementId="com.dassault.edt.ui.command.expandTreeView" commandName="Expand Tree View"/>
+    <elements xsi:type="commands:Command" xmi:id="_gghZ8CY9Ee6Gz9QQ2_ACXQ" elementId="com.dassault.edt.ui.command.collapseTreeView" commandName="Collapse Tree View"/>
+    <elements xsi:type="commands:Command" xmi:id="_ykwHECbPEe6Gz9QQ2_ACXQ" elementId="com.dassault.edt.ui.command.enableGraphicalErrorDisplay" commandName="Enable Graphical Warning Error Display"/>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_fW12kIrOEeW7h_qdP9N9fw" featurename="handlers" parentElementId="xpath:/">
+    <elements xsi:type="commands:Handler" xmi:id="_BqHPMKeFEe285OEpj84Gyg" elementId="com.dassault.edt.ui.handler.new" contributionURI="bundleclass://com.dassault.edt.ui/com.dassault.edt.handlers.NewProjectHandler" command="_89V-EKeEEe285OEpj84Gyg"/>
+    <elements xsi:type="commands:Handler" xmi:id="_5E4pUKeFEe2yd95DFVQ4LA" elementId="com.dassault.edt.ui.handler.open" contributionURI="bundleclass://com.dassault.edt.ui/com.dassault.edt.handlers.OpenProjectHandler" command="_IO7nEKeFEe285OEpj84Gyg"/>
+    <elements xsi:type="commands:Handler" xmi:id="_9bO-gKeFEe2yd95DFVQ4LA" elementId="com.dassault.edt.ui.handler.save" contributionURI="bundleclass://com.dassault.edt.ui/com.dassault.edt.handlers.SaveProjectHandler" command="_JBMxgKeFEe285OEpj84Gyg"/>
+    <elements xsi:type="commands:Handler" xmi:id="__5dUcKeFEe2yd95DFVQ4LA" elementId="com.dassault.edt.ui.handler.delete" contributionURI="bundleclass://com.dassault.edt.ui/com.dassault.edt.handlers.DeleteProjectHandler" command="_KKhKAKeFEe285OEpj84Gyg"/>
+    <elements xsi:type="commands:Handler" xmi:id="_Dot0cKeGEe2yd95DFVQ4LA" elementId="com.dassault.edt.ui.handler.import" contributionURI="bundleclass://com.dassault.edt.ui/com.dassault.edt.handlers.ImportProjectHandler" command="_LL5ugKeFEe285OEpj84Gyg"/>
+    <elements xsi:type="commands:Handler" xmi:id="_I0O9wACAEe67mtmLEW-yjw" elementId="com.dassault.edt.ui.handler.partialimport" contributionURI="bundleclass://com.dassault.edt.ui/com.dassault.edt.handlers.PartialImportProjectHandler" command="_xDmJMAB2Ee67mtmLEW-yjw"/>
+    <elements xsi:type="commands:Handler" xmi:id="_FuYgcKeGEe2yd95DFVQ4LA" elementId="com.dassault.edt.ui.handler.export" contributionURI="bundleclass://com.dassault.edt.ui/com.dassault.edt.handlers.ExportProjectHandler" command="_MGNaoKeFEe285OEpj84Gyg"/>
+    <elements xsi:type="commands:Handler" xmi:id="_HrDBcKeGEe2yd95DFVQ4LA" elementId="com.dassault.edt.ui.handler.quit" contributionURI="bundleclass://com.dassault.edt.ui/com.dassault.edt.handlers.QuitApplicationHandler" command="_NgBtQKeFEe285OEpj84Gyg"/>
+    <elements xsi:type="commands:Handler" xmi:id="_KKbN8KeGEe2yd95DFVQ4LA" elementId="com.dassault.edt.ui.handler.treeView" contributionURI="bundleclass://com.dassault.edt.ui/com.dassault.edt.handlers.OpenTreeViewHandler" command="_vKO-EKeFEe2yd95DFVQ4LA"/>
+    <elements xsi:type="commands:Handler" xmi:id="_KeH78LONEe24CNZ8jV-tGQ" elementId="com.dassault.edt.ui.handler.openAssemblyGraphicalView" contributionURI="bundleclass://com.dassault.edt.ui/com.dassault.edt.handlers.OpenAssemblyGraphicalViewHandler" command="_c7YW4LOMEe24CNZ8jV-tGQ"/>
+    <elements xsi:type="commands:Handler" xmi:id="_N6iCgKeGEe2yd95DFVQ4LA" elementId="com.dassault.edt.ui.handler.openProperties" contributionURI="bundleclass://com.dassault.edt.ui/com.dassault.edt.handlers.OpenPropertiesHandler" command="_xAeG8KeFEe2yd95DFVQ4LA"/>
+    <elements xsi:type="commands:Handler" xmi:id="_y5tNILayEe2hf8Dkfd6y2Q" elementId="com.dassault.edt.ui.handler.openConsole" contributionURI="bundleclass://com.dassault.edt.ui/com.dassault.edt.handlers.OpenConsoleHandler" command="_uAZU0LayEe2hf8Dkfd6y2Q"/>
+    <elements xsi:type="commands:Handler" xmi:id="_R-Jo8KeGEe2yd95DFVQ4LA" elementId="com.dassault.edt.ui.handler.versions" contributionURI="bundleclass://com.dassault.edt.ui/com.dassault.edt.handlers.VersionHandler" command="_2Fnb0KeFEe2yd95DFVQ4LA"/>
+    <elements xsi:type="commands:Handler" xmi:id="_UdJa8KeGEe2yd95DFVQ4LA" elementId="com.dassault.edt.ui.handler.licenses" contributionURI="bundleclass://com.dassault.edt.ui/com.dassault.edt.handlers.LicenseHandler" command="_23BDkKeFEe2yd95DFVQ4LA"/>
+    <elements xsi:type="commands:Handler" xmi:id="_BSvYMLOSEe2CAtPSxCmvnA" elementId="com.dassault.edt.ui.handler.close" contributionURI="bundleclass://com.dassault.edt.ui/com.dassault.edt.handlers.CloseProjectHandler" command="_dHXyMLOREe2CAtPSxCmvnA"/>
+    <elements xsi:type="commands:Handler" xmi:id="_rpf14M7PEe2sm_L787R9bw" elementId="com.dassault.edt.ui.handler.rename" contributionURI="bundleclass://com.dassault.edt.ui/com.dassault.edt.handlers.RenameProjectHandler" command="_0j9PcM7PEe2sm_L787R9bw"/>
+    <elements xsi:type="commands:Handler" xmi:id="_fZFOcOXLEe21F9xtfNZLcg" elementId="com.dassault.edt.ui.handler.openLogicalSystemAndDeploymentSchemaGraphicalView" contributionURI="bundleclass://com.dassault.edt.ui/com.dassault.edt.handlers.OpenLogicalSystemAndDeploymentSchemaGraphicalViewHandler" command="_U74PwOXLEe21F9xtfNZLcg"/>
+    <elements xsi:type="commands:Handler" xmi:id="_je8vIOTwEe2wSoi6bsYZ8g" elementId="com.dassault.edt.ui.handler.outline" contributionURI="bundleclass://com.dassault.edt.ui/com.dassault.edt.handlers.OpenOutlineViewHandler" command="_bDRjUOTwEe2wSoi6bsYZ8g"/>
+    <elements xsi:type="commands:Handler" xmi:id="_ChUysO8QEe2azdx14gXd-A" elementId="com.dassault.edt.ui.handler.enableGraphicalErrorDisplay" contributionURI="bundleclass://com.dassault.edt.ui/com.dassault.edt.handlers.EnableOptionalGraphicalErrorDisplay" command="_xuqjQO8OEe2azdx14gXd-A"/>
+    <elements xsi:type="commands:Handler" xmi:id="_1jxWIO8aEe2azdx14gXd-A" elementId="com.dassault.edt.ui.handler.disableGraphicalErrorDisplay" contributionURI="bundleclass://com.dassault.edt.ui/com.dassault.edt.handlers.DisableOptionalGraphicalErrorDisplay" command="_wXJgQO8aEe2azdx14gXd-A"/>
+    <elements xsi:type="commands:Handler" xmi:id="_nEL7QCY9Ee6Gz9QQ2_ACXQ" elementId="com.dassault.edt.ui.handler.expandTreeView" contributionURI="bundleclass://com.dassault.edt.ui/com.dassault.edt.handlers.ExpandTreeView" command="_OecUkCY9Ee6Gz9QQ2_ACXQ"/>
+    <elements xsi:type="commands:Handler" xmi:id="_MayPMCZHEe6Gz9QQ2_ACXQ" elementId="com.dassault.edt.ui.handler.collapseTreeView" contributionURI="bundleclass://com.dassault.edt.ui/com.dassault.edt.handlers.CollapseTreeView" command="_gghZ8CY9Ee6Gz9QQ2_ACXQ"/>
+    <elements xsi:type="commands:Handler" xmi:id="_7usuICbPEe6Gz9QQ2_ACXQ" elementId="com.dassault.edt.ui.handler.enableGraphicalWarningErrorDisplay" contributionURI="bundleclass://com.dassault.edt.ui/com.dassault.edt.handlers.EnableOptionalGraphicalWarningErrorDisplay" command="_ykwHECbPEe6Gz9QQ2_ACXQ"/>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_pVgfIIrOEeW7h_qdP9N9fw" featurename="menuContributions" parentElementId="xpath:/">
+    <elements xsi:type="menu:MenuContribution" xmi:id="_tSwX0IrOEeW7h_qdP9N9fw" elementId="org.eclipse.pde.ui.templates.menucontribution.0" positionInParent="after=additions" parentId="org.eclipse.ui.main.menu">
+      <persistedState key="persistState" value="false"/>
+      <children xsi:type="menu:Menu" xmi:id="_87X24Kd-Ee285OEpj84Gyg" elementId="com.dassault.edt.menus.Project" label="Project" mnemonics="P">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_XrniEKeGEe2yd95DFVQ4LA" elementId="com.dassault.edt.ui.handledmenuitem.new" label="New" mnemonics="N" command="_89V-EKeEEe285OEpj84Gyg"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_cw3koKeGEe2yd95DFVQ4LA" elementId="com.dassault.edt.ui.handledmenuitem.open" label="Open" mnemonics="O" command="_IO7nEKeFEe285OEpj84Gyg"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_epiWcKeGEe2yd95DFVQ4LA" elementId="com.dassault.edt.ui.handledmenuitem.save" label="Save" mnemonics="S" command="_JBMxgKeFEe285OEpj84Gyg"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_G7SzIM7QEe2sm_L787R9bw" elementId="com.dassault.edt.ui.handledmenuitem.rename" label="Rename" mnemonics="R" command="_0j9PcM7PEe2sm_L787R9bw"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_BklrQLOUEe2CAtPSxCmvnA" elementId="com.dassault.edt.ui.handledmenuitem.close" label="Close" mnemonics="C" command="_dHXyMLOREe2CAtPSxCmvnA"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_gM7b0KeGEe2yd95DFVQ4LA" elementId="com.dassault.edt.ui.handledmenuitem.delete" label="Delete" mnemonics="D" command="_KKhKAKeFEe285OEpj84Gyg"/>
+        <children xsi:type="menu:MenuSeparator" xmi:id="_ibT-8KeGEe2yd95DFVQ4LA" elementId="com.dassault.edt.ui.menuseparator.0"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_jDmG8KeGEe2yd95DFVQ4LA" elementId="com.dassault.edt.ui.handledmenuitem.import" label="Import" mnemonics="I" command="_LL5ugKeFEe285OEpj84Gyg"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_hVcCsACAEe67mtmLEW-yjw" elementId="com.dassault.edt.ui.handledmenuitem.partialimport" label="Partial Import" command="_xDmJMAB2Ee67mtmLEW-yjw"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_klVmgKeGEe2yd95DFVQ4LA" elementId="com.dassault.edt.ui.handledmenuitem.export" label="Export" mnemonics="E" command="_MGNaoKeFEe285OEpj84Gyg"/>
+        <children xsi:type="menu:MenuSeparator" xmi:id="_mNi6cKeGEe2yd95DFVQ4LA" elementId="com.dassault.edt.ui.menuseparator.2"/>
+        <children xsi:type="menu:MenuSeparator" xmi:id="_5YbxAO8OEe2azdx14gXd-A" elementId="com.dassault.edt.ui.menuseparator.2"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_mk64oKeGEe2yd95DFVQ4LA" elementId="com.dassault.edt.ui.handledmenuitem.quit" label="Quit" mnemonics="Q" command="_NgBtQKeFEe285OEpj84Gyg"/>
+      </children>
+      <children xsi:type="menu:Menu" xmi:id="_87cvYKd-Ee285OEpj84Gyg" elementId="com.dassault.edt.menus.ShowView" label="Show View" mnemonics="V">
+        <children xsi:type="menu:Menu" xmi:id="_sqY5ELaPEe2hf8Dkfd6y2Q" elementId="com.dassault.edt.ui.menu.tree" label="Tree" mnemonics="T">
+          <children xsi:type="menu:HandledMenuItem" xmi:id="_sqY5EbaPEe2hf8Dkfd6y2Q" elementId="com.dassault.edt.ui.handledmenuitem.openTreeView" label="Open Tree View" mnemonics="OPT" command="_vKO-EKeFEe2yd95DFVQ4LA"/>
+        </children>
+        <children xsi:type="menu:Menu" xmi:id="_uqzbcLOLEe24CNZ8jV-tGQ" elementId="com.dassault.edt.ui.menu.graph" label="Graph" mnemonics="G">
+          <children xsi:type="menu:HandledMenuItem" xmi:id="_imRU8KeKEe2yd95DFVQ4LA" elementId="com.dassault.edt.ui.handledmenuitem.openAssemblyGraphicalView" label="Open Assembly Graphical View" mnemonics="OAGV" command="_c7YW4LOMEe24CNZ8jV-tGQ"/>
+          <children xsi:type="menu:HandledMenuItem" xmi:id="_pX9SYOXLEe21F9xtfNZLcg" elementId="com.dassault.edt.ui.handledmenuitem.openLogicalSystemGraphicalView" label="Open Logical System And Deployment Schema Graphical View" mnemonics="OLSADSGV" command="_U74PwOXLEe21F9xtfNZLcg"/>
+        </children>
+        <children xsi:type="menu:Menu" xmi:id="_RDfXQPZFEe2iZ_9nLcAvWg" elementId="com.dassault.edt.ui.menu.GraphicalErrorDisplay" label="Graphical Warning And Error Display" mnemonics="GED">
+          <children xsi:type="menu:HandledMenuItem" xmi:id="_p35EoCbPEe6Gz9QQ2_ACXQ" elementId="com.dassault.edt.ui.handledmenuitem.enableGraphicalErrorDisplay" label="Enable only error" mnemonics="EGED" command="_xuqjQO8OEe2azdx14gXd-A"/>
+          <children xsi:type="menu:HandledMenuItem" xmi:id="_RDfXQfZFEe2iZ_9nLcAvWg" elementId="com.dassault.edt.ui.handledmenuitem.enableGraphicalErrorDisplay" label="Enable Warning + Error" mnemonics="EGWED" command="_ykwHECbPEe6Gz9QQ2_ACXQ"/>
+          <children xsi:type="menu:HandledMenuItem" xmi:id="_RDfXQvZFEe2iZ_9nLcAvWg" elementId="com.dassault.edt.ui.handledmenuitem.disableGraphicalErrorDisplay" label="Disable" mnemonics="DGED" command="_wXJgQO8aEe2azdx14gXd-A"/>
+        </children>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_kCA6MKeKEe2yd95DFVQ4LA" elementId="com.dassault.edt.ui.handledmenuitem.properties" label="Properties" mnemonics="t" command="_xAeG8KeFEe2yd95DFVQ4LA"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_6aSCoLayEe2hf8Dkfd6y2Q" elementId="com.dassault.edt.ui.handledmenuitem.console" label="Console" mnemonics="C" command="_uAZU0LayEe2hf8Dkfd6y2Q"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_jEBRMOTxEe2wSoi6bsYZ8g" elementId="com.dassault.edt.ui.handledmenuitem.outline" label="Outline" command="_bDRjUOTwEe2wSoi6bsYZ8g"/>
+        <children xsi:type="menu:Menu" xmi:id="_4BKZwCY9Ee6Gz9QQ2_ACXQ" elementId="com.dassault.edt.ui.menu.expandCollapseTreeView" label="Expand/Collapse Tree View" mnemonics="">
+          <children xsi:type="menu:HandledMenuItem" xmi:id="_9v9voCY9Ee6Gz9QQ2_ACXQ" elementId="com.dassault.edt.ui.handledmenuitem.expandTreeView" label="Expand TreeView" command="_OecUkCY9Ee6Gz9QQ2_ACXQ"/>
+          <children xsi:type="menu:HandledMenuItem" xmi:id="_kcejECZGEe6Gz9QQ2_ACXQ" elementId="com.dassault.edt.ui.handledmenuitem.collapseTreeView" label="Collapse TreeView" command="_gghZ8CY9Ee6Gz9QQ2_ACXQ"/>
+        </children>
+      </children>
+      <children xsi:type="menu:Menu" xmi:id="_87fLoKd-Ee285OEpj84Gyg" elementId="com.dassault.edt.menus.About" label="About" mnemonics="A">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_pVfmAKeKEe2yd95DFVQ4LA" elementId="com.dassault.edt.ui.handledmenuitem.versions" label="Version" mnemonics="V" command="_2Fnb0KeFEe2yd95DFVQ4LA"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_rN1nsKeKEe2yd95DFVQ4LA" elementId="com.dassault.edt.ui.handledmenuitem.licenses" label="License" mnemonics="L" command="_23BDkKeFEe2yd95DFVQ4LA"/>
+      </children>
+    </elements>
+  </fragments>
+</fragment:ModelFragments>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="edtdeployment" nsURI="edtdeployment" nsPrefix="edtdeployment">
+  <eClassifiers xsi:type="ecore:EClass" name="Deployment">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Name"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="logicalSystem" lowerBound="1"
+        eType="ecore:EClass EDTLogicalSystem.ecore#//LogicalSystem"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="finalAssembly" lowerBound="1"
+        eType="ecore:EClass EDTProject2.ecore#//FinalAssembly"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="protectionDomains" lowerBound="1"
+        upperBound="-1" eType="#//ProtectionDomain" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="protectionDomain"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="logPolicies" upperBound="-1"
+        eType="#//LogPolicy" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="logPolicy"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="platformConfigurations"
+        lowerBound="1" upperBound="-1" eType="#//PlatformConfiguration" containment="true"
+        resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Defines platform-wide settings&#xA;          "/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="platformConfiguration"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="wireMappings" upperBound="-1"
+        eType="#//WireMapping" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Defines a mapping between a wire and a&#xA;            computing platform link&#xA;          "/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="wireMapping"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProtectionDomain">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="deployedModuleInstances"
+        upperBound="-1" eType="#//DeployedModuleInstance" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="deployedTriggerInstances"
+        upperBound="-1" eType="#//DeployedTriggerInstance" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType ../../com.dassault.ecoa.model/model/deployment.ecore#//NameId"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="executeOnComputingNode"
+        lowerBound="1" eType="ecore:EClass EDTLogicalSystem.ecore#//LogicalComputingNode"
+        eOpposite="EDTLogicalSystem.ecore#//LogicalComputingNode/ProtectionDomainLink"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="executeOnComputingPlatform"
+        lowerBound="1" eType="ecore:EClass EDTLogicalSystem.ecore#//LogicalComputingPlatform"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DeployedModuleInstance">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="modulePriority" lowerBound="1"
+        eType="ecore:EDataType ../../com.dassault.ecoa.model/model/deployment.ecore#//ModulePriority">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Abstract module priority that can be&#xA;                  used by the platform to map the module on an&#xA;                  actual OS priority&#xA;                "/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="attribute"/>
+        <details key="name" value="modulePriority"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ModuleInstance" lowerBound="1"
+        eType="ecore:EClass EDTImplementation.ecore#//ModuleInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ComponentImplementation"
+        lowerBound="1" eType="ecore:EClass EDTImplementation.ecore#//ComponentImplementation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Component" lowerBound="1"
+        eType="ecore:EClass EDTProject2.ecore#//Component"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DeployedTriggerInstance">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="triggerPriority" lowerBound="1"
+        eType="ecore:EDataType ../../com.dassault.ecoa.model/model/deployment.ecore#//ModulePriority">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Abstract trigger priority that can be&#xA;                  used by the platform to map the trigger on an actual&#xA;                  OS priority&#xA;                "/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="attribute"/>
+        <details key="name" value="triggerPriority"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="TriggerInstance" lowerBound="1"
+        eType="ecore:EClass EDTImplementation.ecore#//Trigger"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ComponentImplementation"
+        lowerBound="1" eType="ecore:EClass EDTImplementation.ecore#//ComponentImplementation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Component" lowerBound="1"
+        eType="ecore:EClass EDTProject2.ecore#//Component"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LogPolicy">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="componentLogs" upperBound="-1"
+        eType="#//ComponentLog" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="componentLog"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentLog">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="moduleLogs" upperBound="-1"
+        eType="#//ModuleLog" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="moduleLog"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="enabledLevels" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="attribute"/>
+        <details key="name" value="enabledLevels"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ComponentInstance" lowerBound="1"
+        eType="ecore:EClass EDTProject2.ecore#//Component"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ComponentImplementation"
+        lowerBound="1" eType="ecore:EClass EDTImplementation.ecore#//ComponentImplementation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModuleLog">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="enabledLevels" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="attribute"/>
+        <details key="name" value="enabledLevels"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ModuleInstance" lowerBound="1"
+        eType="ecore:EClass EDTImplementation.ecore#//ModuleInstance"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PlatformConfiguration">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="computingNodeConfigurations"
+        upperBound="-1" eType="#//ComputingNodeConfiguration" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Defines the computing node level&#xA;            configuration&#xA;          "/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="computingNodeConfiguration"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="platformMessages" upperBound="-1"
+        eType="#//PlatformMessage" containment="true" resolveProxies="false">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Define on which the platform&#xA;            domain messages are mapped&#xA;          "/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="platformMessages"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="eUIDs" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//AnyURI">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Specific EUIDS file associated to one&#xA;          given peer of the link&#xA;        "/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="attribute"/>
+        <details key="name" value="EUIDs"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="faultHandlerNotificationMaxNumber"
+        eType="ecore:EDataType ../../com.dassault.ecoa.model/model/deployment.ecore#//FifoSize"
+        defaultValueLiteral="8" unsettable="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Defines the number of fault handler&#xA;          notifications that a Module Container shall be able&#xA;          to handle at any time. These notifications are&#xA;          relevant depending on the Module “isFaultHandler”&#xA;          attribute.&#xA;        "/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="attribute"/>
+        <details key="name" value="faultHandlerNotificationMaxNumber"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="computingPlatform" lowerBound="1"
+        eType="ecore:EClass EDTLogicalSystem.ecore#//LogicalComputingPlatform"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PlatformMessage">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mappedOnLinkId" lowerBound="1"
+        eType="ecore:EClass EDTLogicalSystem.ecore#//LogicalComputingPlatformLink"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComputingNodeConfiguration">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="schedulingInformation"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//AnyURI">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Link to any external file containing any&#xA;          additional scheduling parameters required by the system&#xA;          integrator (non-defined by ECOA)&#xA;        "/>
+      </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="attribute"/>
+        <details key="name" value="schedulingInformation"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="computingNode" lowerBound="1"
+        eType="ecore:EClass EDTLogicalSystem.ecore#//LogicalComputingNode"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WireMapping">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mappedOnLinkId" lowerBound="1"
+        eType="ecore:EClass EDTLogicalSystem.ecore#//LogicalComputingPlatformLink"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Wire" lowerBound="1" eType="ecore:EClass EDTProject2.ecore#//ServiceLink"/>
+  </eClassifiers>
+</ecore:EPackage>

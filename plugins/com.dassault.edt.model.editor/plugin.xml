@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated EDT -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="edtbin.presentation.EdtbinModelWizardID"
+            name="%_UI_EdtbinModelWizard_label"
+            class="edtbin.presentation.EdtbinModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/EdtbinModelFile.gif">
+         <description>%_UI_EdtbinModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated EDT -->
+      <editor
+            id="edtbin.presentation.EdtbinEditorID"
+            name="%_UI_EdtbinEditor_label"
+            icon="icons/full/obj16/EdtbinModelFile.gif"
+            extensions="edtbin"
+            class="edtbin.presentation.EdtbinEditor"
+            contributorClass="edtbin.presentation.EdtbinActionBarContributor">
+      </editor>
+   </extension>
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated EDT -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="edtdeployment.presentation.EdtdeploymentModelWizardID"
+            name="%_UI_EdtdeploymentModelWizard_label"
+            class="edtdeployment.presentation.EdtdeploymentModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/EdtdeploymentModelFile.gif">
+         <description>%_UI_EdtdeploymentModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated EDT -->
+      <editor
+            id="edtdeployment.presentation.EdtdeploymentEditorID"
+            name="%_UI_EdtdeploymentEditor_label"
+            icon="icons/full/obj16/EdtdeploymentModelFile.gif"
+            extensions="edtdeployment"
+            class="edtdeployment.presentation.EdtdeploymentEditor"
+            contributorClass="edtdeployment.presentation.EdtdeploymentActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated EDT -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="edtimplementation.presentation.EdtimplementationModelWizardID"
+            name="%_UI_EdtimplementationModelWizard_label"
+            class="edtimplementation.presentation.EdtimplementationModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/EdtimplementationModelFile.gif">
+         <description>%_UI_EdtimplementationModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated EDT -->
+      <editor
+            id="edtimplementation.presentation.EdtimplementationEditorID"
+            name="%_UI_EdtimplementationEditor_label"
+            icon="icons/full/obj16/EdtimplementationModelFile.gif"
+            extensions="edtimplementation"
+            class="edtimplementation.presentation.EdtimplementationEditor"
+            contributorClass="edtimplementation.presentation.EdtimplementationActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated EDT -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="edtlogical.presentation.EdtlogicalModelWizardID"
+            name="%_UI_EdtlogicalModelWizard_label"
+            class="edtlogical.presentation.EdtlogicalModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/EdtlogicalModelFile.gif">
+         <description>%_UI_EdtlogicalModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated EDT -->
+      <editor
+            id="edtlogical.presentation.EdtlogicalEditorID"
+            name="%_UI_EdtlogicalEditor_label"
+            icon="icons/full/obj16/EdtlogicalModelFile.gif"
+            extensions="edtlogical"
+            class="edtlogical.presentation.EdtlogicalEditor"
+            contributorClass="edtlogical.presentation.EdtlogicalActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated EDT -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="edtproject.presentation.EDTProjectModelWizardID"
+            name="%_UI_EDTProjectModelWizard_label"
+            class="edtproject.presentation.EDTProjectModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/EDTProjectModelFile.gif">
+         <description>%_UI_EDTProjectModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated EDT -->
+      <editor
+            id="edtproject.presentation.EDTProjectEditorID"
+            name="%_UI_EDTProjectEditor_label"
+            icon="icons/full/obj16/EDTProjectModelFile.gif"
+            extensions="edtproject"
+            class="edtproject.presentation.EDTProjectEditor"
+            contributorClass="edtproject.presentation.EDTProjectActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated EDT -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="edtqos.presentation.EdtqosModelWizardID"
+            name="%_UI_EdtqosModelWizard_label"
+            class="edtqos.presentation.EdtqosModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/EdtqosModelFile.gif">
+         <description>%_UI_EdtqosModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated EDT -->
+      <editor
+            id="edtqos.presentation.EdtqosEditorID"
+            name="%_UI_EdtqosEditor_label"
+            icon="icons/full/obj16/EdtqosModelFile.gif"
+            extensions="edtqos"
+            class="edtqos.presentation.EdtqosEditor"
+            contributorClass="edtqos.presentation.EdtqosActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated EDT -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="edtinterface.presentation.EDTInterfaceModelWizardID"
+            name="%_UI_EDTInterfaceModelWizard_label"
+            class="edtinterface.presentation.EDTInterfaceModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/EDTInterfaceModelFile.gif">
+         <description>%_UI_EDTInterfaceModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated EDT -->
+      <editor
+            id="edtinterface.presentation.EDTInterfaceEditorID"
+            name="%_UI_EDTInterfaceEditor_label"
+            icon="icons/full/obj16/EDTInterfaceModelFile.gif"
+            extensions="edtinterface"
+            class="edtinterface.presentation.EDTInterfaceEditor"
+            contributorClass="edtinterface.presentation.EDTInterfaceActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated EDT -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="edttype.presentation.EDTTypeModelWizardID"
+            name="%_UI_EDTTypeModelWizard_label"
+            class="edttype.presentation.EDTTypeModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/EDTTypeModelFile.gif">
+         <description>%_UI_EDTTypeModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated EDT -->
+      <editor
+            id="edttype.presentation.EDTTypeEditorID"
+            name="%_UI_EDTTypeEditor_label"
+            icon="icons/full/obj16/EDTTypeModelFile.gif"
+            extensions="edttype"
+            class="edttype.presentation.EDTTypeEditor"
+            contributorClass="edttype.presentation.EDTTypeActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated EDT -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="temp.presentation.TempModelWizardID"
+            name="%_UI_TempModelWizard_label"
+            class="temp.presentation.TempModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/TempModelFile.gif">
+         <description>%_UI_TempModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated EDT -->
+      <editor
+            id="temp.presentation.TempEditorID"
+            name="%_UI_TempEditor_label"
+            icon="icons/full/obj16/TempModelFile.gif"
+            extensions="temp"
+            class="temp.presentation.TempEditor"
+            contributorClass="temp.presentation.TempActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated EDT -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="edtudp.presentation.EdtudpModelWizardID"
+            name="%_UI_EdtudpModelWizard_label"
+            class="edtudp.presentation.EdtudpModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/EdtudpModelFile.gif">
+         <description>%_UI_EdtudpModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated EDT -->
+      <editor
+            id="edtudp.presentation.EdtudpEditorID"
+            name="%_UI_EdtudpEditor_label"
+            icon="icons/full/obj16/EdtudpModelFile.gif"
+            extensions="edtudp"
+            class="edtudp.presentation.EdtudpEditor"
+            contributorClass="edtudp.presentation.EdtudpActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated EDT -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="edtuid.presentation.EdtuidModelWizardID"
+            name="%_UI_EdtuidModelWizard_label"
+            class="edtuid.presentation.EdtuidModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/EdtuidModelFile.gif">
+         <description>%_UI_EdtuidModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated EDT -->
+      <editor
+            id="edtuid.presentation.EdtuidEditorID"
+            name="%_UI_EdtuidEditor_label"
+            icon="icons/full/obj16/EdtuidModelFile.gif"
+            extensions="edtuid"
+            class="edtuid.presentation.EdtuidEditor"
+            contributorClass="edtuid.presentation.EdtuidActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="edtqos" nsURI="edtqos" nsPrefix="edtqos">
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceInstanceQos">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operations" upperBound="-1"
+        eType="#//Operation" containment="true" resolveProxies="false">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="operations"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ServiceDefinition" lowerBound="1"
+        eType="ecore:EClass EDTServices.ecore#//ServiceDefinition"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//NCName"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="InterfaceLink" upperBound="-1"
+        eType="ecore:EClass EDTProject2.ecore#//Contract" eOpposite="EDTProject2.ecore#//Contract/Qos"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Operation" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="highestRateNumberOfOccurrences"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Decimal"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="highestRateTimeFrame" eType="ecore:EDataType ../../com.dassault.ecoa.model/model/qos.ecore#//TimeDuration"
+        unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lowestRateNumberOfOccurrences"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Decimal"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lowestRateTimeFrame" eType="ecore:EDataType ../../com.dassault.ecoa.model/model/qos.ecore#//TimeDuration"
+        unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType ../../com.dassault.ecoa.model/model/qos.ecore#//NameId"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Data" eSuperTypes="#//Operation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxAgeing" eType="ecore:EDataType ../../com.dassault.ecoa.model/model/qos.ecore#//TimeDuration"
+        unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="notificationMaxHandlingTime"
+        eType="ecore:EDataType ../../com.dassault.ecoa.model/model/qos.ecore#//TimeDuration"
+        unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ServiceDefinitionData"
+        lowerBound="1" eType="ecore:EClass EDTServices.ecore#//Data"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Event" eSuperTypes="#//Operation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxHandlingTime" eType="ecore:EDataType ../../com.dassault.ecoa.model/model/qos.ecore#//TimeDuration"
+        unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ServiceDefinitionEvent"
+        lowerBound="1" eType="ecore:EClass EDTServices.ecore#//Event"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RequestResponse" eSuperTypes="#//Operation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="callbackMaxHandlingTime"
+        eType="ecore:EDataType ../../com.dassault.ecoa.model/model/qos.ecore#//TimeDuration"
+        unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxResponseTime" eType="ecore:EDataType ../../com.dassault.ecoa.model/model/qos.ecore#//TimeDuration"
+        unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ServiceDefinitionRequestResponse"
+        lowerBound="1" eType="ecore:EClass EDTServices.ecore#//RequestResponse"/>
+  </eClassifiers>
+</ecore:EPackage>

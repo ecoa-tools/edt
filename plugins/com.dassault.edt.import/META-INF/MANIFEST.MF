@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Import
+Bundle-SymbolicName: com.dassault.edt.import
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: DASSAULT
+Automatic-Module-Name: com.dassault.edt.import
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Require-Bundle: com.dassault.ecoa.model,
+ com.dassault.edt.model
+Export-Package: com.dassault.edt.converters,
+ com.dassault.edt.xmlimport
+Import-Package: com.dassault.edt.export,
+ com.dassault.edt.log

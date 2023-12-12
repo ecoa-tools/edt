@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="edtbin" nsURI="edtbin" nsPrefix="edtbin">
+  <eClassifiers xsi:type="ecore:EClass" name="BinaryModule">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="binaryDependencies" upperBound="-1"
+        eType="ecore:EClass ../../com.dassault.ecoa.model/model/BinDesc.ecore#//BinaryDependency"
+        containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="checksum" lowerBound="1"
+        eType="ecore:EDataType ../../com.dassault.ecoa.model/model/BinDesc.ecore#//HexOrDecValue"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="heapSize" lowerBound="1"
+        eType="ecore:EDataType ../../com.dassault.ecoa.model/model/BinDesc.ecore#//HexOrDecValue"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="object" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//AnyURI"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stackSize" lowerBound="1"
+        eType="ecore:EDataType ../../com.dassault.ecoa.model/model/BinDesc.ecore#//HexOrDecValue"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="userContextSize" lowerBound="1"
+        eType="ecore:EDataType ../../com.dassault.ecoa.model/model/BinDesc.ecore#//HexOrDecValue"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="warmStartContextSize" lowerBound="1"
+        eType="ecore:EDataType ../../com.dassault.ecoa.model/model/BinDesc.ecore#//HexOrDecValue"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reference" lowerBound="1"
+        eType="ecore:EClass EDTImplementation.ecore#//ModuleImplementation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BinDesc">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="binaryModules" lowerBound="1"
+        upperBound="-1" eType="#//BinaryModule" containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="insertionPolicy" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//AnyURI"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="processorTargetType" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fileName" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  </eClassifiers>
+</ecore:EPackage>
